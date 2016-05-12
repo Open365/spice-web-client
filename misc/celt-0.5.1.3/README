@@ -1,0 +1,33 @@
+CELT is a very low delay audio codec designed for high-quality
+communications.  Its potential uses include video-conferencing and
+network music performance.  This is a maintained branch of the 0.5.1
+prerelease of CELT.  
+
+THIS 0.5.1-X PRERELEASE IS NOT COMPATABLE WITH ANY PREVIOUS OR
+SUBSEQUENT NUMBERED RELEASE.
+
+0.5.0 aand before as well as 0.5.2 and later use a different API, a
+different ABI and a different bitstream format.  Only other
+prereleases on this 0.5.1 branch are code, binary or stream compatable
+with this version.
+
+To compile:
+% ./configure
+% make
+
+To test the encoder:
+% testcelt <rate> <channels> <frame size> <bytes per packet> input.sw output.sw
+
+...where input.sw is a 16-bit (machine endian) audio file sampled at
+44.1 kHz or 48 kHz. The output file is already decompressed.  the
+<rate> parameter is the number of bytes per packet to use.
+
+Alternatively, there are now Ogg-based tools in tools/. Use the --help
+option for details. These are quite similar to the speexenc/speexdec
+tools. Note that these tools should be used for
+_testing_purposes_only_; the bitstream format used by CELT-0.5.1 has
+already been altered in subsequent releases.  Files produced by
+celtenc051 will not be supported by later releases of celt.  They will
+work only with releasein this 0.5.1 branch, and will not be supported
+in the larger Ogg frameworks.
+

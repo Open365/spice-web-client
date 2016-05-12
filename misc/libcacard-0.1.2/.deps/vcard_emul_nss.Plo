@@ -1,0 +1,319 @@
+vcard_emul_nss.lo: vcard_emul_nss.c vcard.h vcardt.h \
+ /usr/include/assert.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/bits/predefs.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h card_7816t.h vcard_emul.h \
+ vcard_emul_type.h vreadert.h vreader.h eventt.h vevent.h \
+ /usr/include/nss/nss.h /usr/include/nss/seccomon.h \
+ /usr/include/nss/utilrename.h /usr/include/nspr/prtypes.h \
+ /usr/include/nspr/prcpucfg.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.6/include/stddef.h \
+ /usr/include/nspr/obsolete/protypes.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
+ /usr/include/x86_64-linux-gnu/bits/types.h \
+ /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/time.h \
+ /usr/include/endian.h /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/sigset.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/select2.h \
+ /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+ /usr/include/nss/secport.h /usr/include/nspr/prlink.h \
+ /usr/include/nspr/prtypes.h /usr/include/ctype.h /usr/include/xlocale.h \
+ /usr/include/string.h /usr/include/x86_64-linux-gnu/bits/string.h \
+ /usr/include/x86_64-linux-gnu/bits/string2.h /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/string3.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h /usr/include/nspr/prlog.h \
+ /usr/include/nspr/plarena.h /usr/include/nspr/plarenas.h \
+ /usr/include/nspr/plstr.h /usr/include/nss/pk11pub.h \
+ /usr/include/nss/secoidt.h /usr/include/nss/secitem.h \
+ /usr/include/nspr/plhash.h /usr/include/stdio.h /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/wchar.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.6/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/nss/secdert.h \
+ /usr/include/nss/keyt.h /usr/include/nss/keythi.h \
+ /usr/include/nss/pkcs11t.h /usr/include/nss/pkcs11p.h \
+ /usr/include/nss/pkcs11n.h /usr/include/nss/pkcs11u.h \
+ /usr/include/nss/secmodt.h /usr/include/nss/nssrwlkt.h \
+ /usr/include/nss/nssilock.h /usr/include/nspr/prmon.h \
+ /usr/include/nspr/prinrval.h /usr/include/nspr/prlock.h \
+ /usr/include/nspr/prcvar.h /usr/include/nspr/prlock.h \
+ /usr/include/nss/nssilckt.h /usr/include/nss/secoid.h \
+ /usr/include/nss/secasn1t.h /usr/include/nss/secasn1.h \
+ /usr/include/nspr/prclist.h /usr/include/nss/certt.h \
+ /usr/include/nspr/prio.h /usr/include/nspr/prlong.h \
+ /usr/include/nspr/prtime.h /usr/include/nspr/prinet.h \
+ /usr/include/x86_64-linux-gnu/sys/socket.h \
+ /usr/include/x86_64-linux-gnu/sys/uio.h \
+ /usr/include/x86_64-linux-gnu/bits/uio.h \
+ /usr/include/x86_64-linux-gnu/bits/socket.h \
+ /usr/include/x86_64-linux-gnu/bits/sockaddr.h \
+ /usr/include/x86_64-linux-gnu/asm/socket.h \
+ /usr/include/asm-generic/socket.h \
+ /usr/include/x86_64-linux-gnu/asm/sockios.h \
+ /usr/include/asm-generic/sockios.h \
+ /usr/include/x86_64-linux-gnu/bits/socket2.h /usr/include/netinet/in.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.6/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/arpa/inet.h \
+ /usr/include/netdb.h /usr/include/rpc/netdb.h \
+ /usr/include/x86_64-linux-gnu/bits/netdb.h /usr/include/nss/pkcs7t.h \
+ /usr/include/nss/cmsreclist.h /usr/include/nss/cert.h \
+ /usr/include/nspr/prlong.h /usr/include/nss/key.h \
+ /usr/include/nss/keyhi.h /usr/include/nss/secmod.h \
+ /usr/include/nspr/prinrval.h /usr/include/nspr/prthread.h \
+ /usr/include/nss/secerr.h
+
+vcard.h:
+
+vcardt.h:
+
+/usr/include/assert.h:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/bits/predefs.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+card_7816t.h:
+
+vcard_emul.h:
+
+vcard_emul_type.h:
+
+vreadert.h:
+
+vreader.h:
+
+eventt.h:
+
+vevent.h:
+
+/usr/include/nss/nss.h:
+
+/usr/include/nss/seccomon.h:
+
+/usr/include/nss/utilrename.h:
+
+/usr/include/nspr/prtypes.h:
+
+/usr/include/nspr/prcpucfg.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.6/include/stddef.h:
+
+/usr/include/nspr/obsolete/protypes.h:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+
+/usr/include/time.h:
+
+/usr/include/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/x86_64-linux-gnu/bits/sigset.h:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/select2.h:
+
+/usr/include/x86_64-linux-gnu/sys/sysmacros.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/usr/include/nss/secport.h:
+
+/usr/include/nspr/prlink.h:
+
+/usr/include/nspr/prtypes.h:
+
+/usr/include/ctype.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/string.h:
+
+/usr/include/x86_64-linux-gnu/bits/string2.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/string3.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/alloca.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib.h:
+
+/usr/include/nspr/prlog.h:
+
+/usr/include/nspr/plarena.h:
+
+/usr/include/nspr/plarenas.h:
+
+/usr/include/nspr/plstr.h:
+
+/usr/include/nss/pk11pub.h:
+
+/usr/include/nss/secoidt.h:
+
+/usr/include/nss/secitem.h:
+
+/usr/include/nspr/plhash.h:
+
+/usr/include/stdio.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.6/include/stdarg.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+
+/usr/include/nss/secdert.h:
+
+/usr/include/nss/keyt.h:
+
+/usr/include/nss/keythi.h:
+
+/usr/include/nss/pkcs11t.h:
+
+/usr/include/nss/pkcs11p.h:
+
+/usr/include/nss/pkcs11n.h:
+
+/usr/include/nss/pkcs11u.h:
+
+/usr/include/nss/secmodt.h:
+
+/usr/include/nss/nssrwlkt.h:
+
+/usr/include/nss/nssilock.h:
+
+/usr/include/nspr/prmon.h:
+
+/usr/include/nspr/prinrval.h:
+
+/usr/include/nspr/prlock.h:
+
+/usr/include/nspr/prcvar.h:
+
+/usr/include/nspr/prlock.h:
+
+/usr/include/nss/nssilckt.h:
+
+/usr/include/nss/secoid.h:
+
+/usr/include/nss/secasn1t.h:
+
+/usr/include/nss/secasn1.h:
+
+/usr/include/nspr/prclist.h:
+
+/usr/include/nss/certt.h:
+
+/usr/include/nspr/prio.h:
+
+/usr/include/nspr/prlong.h:
+
+/usr/include/nspr/prtime.h:
+
+/usr/include/nspr/prinet.h:
+
+/usr/include/x86_64-linux-gnu/sys/socket.h:
+
+/usr/include/x86_64-linux-gnu/sys/uio.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket.h:
+
+/usr/include/x86_64-linux-gnu/bits/sockaddr.h:
+
+/usr/include/x86_64-linux-gnu/asm/socket.h:
+
+/usr/include/asm-generic/socket.h:
+
+/usr/include/x86_64-linux-gnu/asm/sockios.h:
+
+/usr/include/asm-generic/sockios.h:
+
+/usr/include/x86_64-linux-gnu/bits/socket2.h:
+
+/usr/include/netinet/in.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.6/include/stdint.h:
+
+/usr/include/stdint.h:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/in.h:
+
+/usr/include/arpa/inet.h:
+
+/usr/include/netdb.h:
+
+/usr/include/rpc/netdb.h:
+
+/usr/include/x86_64-linux-gnu/bits/netdb.h:
+
+/usr/include/nss/pkcs7t.h:
+
+/usr/include/nss/cmsreclist.h:
+
+/usr/include/nss/cert.h:
+
+/usr/include/nspr/prlong.h:
+
+/usr/include/nss/key.h:
+
+/usr/include/nss/keyhi.h:
+
+/usr/include/nss/secmod.h:
+
+/usr/include/nspr/prinrval.h:
+
+/usr/include/nspr/prthread.h:
+
+/usr/include/nss/secerr.h:

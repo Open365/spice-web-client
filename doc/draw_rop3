@@ -1,0 +1,261 @@
+
+message {
+DisplayBase base;
+struct Rop3 {
+	Image *src_bitmap;
+	Rect src_area;
+	Brush brush;
+	uint8 rop3;
+	image_scale_mode scale_mode;
+	QMask mask @outvar(mask);
+} data;
+} draw_rop3;
+
+static void gl_canvas_draw_rop3(SpiceCanvas *spice_canvas, SpiceRect *bbox, SpiceClip *clip, SpiceRop3 *rop3)
+{
+	GLCanvas *canvas = (GLCanvas *)spice_canvas;
+	pixman_image_t *d;
+	pixman_image_t *s;
+	GLCImage image;
+	SpicePoint src_pos;
+	uint8_t *data_opp;
+	int src_stride;
+
+	set_clip(canvas, bbox, clip);
+	set_mask(canvas, &rop3->mask, bbox->left, bbox->top);
+
+	glc_set_op(canvas->glc, GLC_OP_COPY);
+
+	image.format = GLC_IMAGE_RGB32;
+	image.width = bbox->right - bbox->left;
+	image.height = bbox->bottom - bbox->top;
+
+	image.pallet = NULL;
+
+	d = pixman_image_create_bits(PIXMAN_x8r8g8b8, image.width, image.height, NULL, 0);
+	if (d == NULL) {
+		CANVAS_ERROR("create surface failed");
+	}
+	image.pixels = (uint8_t *)pixman_image_get_data(d);
+	image.stride = pixman_image_get_stride(d);
+
+	glc_read_pixels(canvas->glc, bbox->left, bbox->top, &image);
+	data_opp = copy_opposite_image(canvas, image.pixels,
+								   image.stride,
+								   pixman_image_get_height(d));
+	memcpy(image.pixels, data_opp,
+		   image.stride * pixman_image_get_height(d));
+
+	s = canvas_get_image(&canvas->base, rop3->src_bitmap, FALSE);
+	src_stride = pixman_image_get_stride(s);
+	if (src_stride > 0) {
+		data_opp = copy_opposite_image(canvas, (uint8_t *)pixman_image_get_data(s),
+									   src_stride, pixman_image_get_height(s));
+		memcpy((uint8_t *)pixman_image_get_data(s), data_opp,
+			   src_stride * pixman_image_get_height(s));
+	}
+
+	if (!rect_is_same_size(bbox, &rop3->src_area)) {
+		pixman_image_t *scaled_s = canvas_scale_surface(s, &rop3->src_area, image.width,
+														image.height, rop3->scale_mode);
+		pixman_image_unref(s);
+		s = scaled_s;
+		src_pos.x = 0;
+		src_pos.y = 0;
+	} else {
+		src_pos.x = rop3->src_area.left;
+		src_pos.y = rop3->src_area.top;
+	}
+
+	if (pixman_image_get_width(s) - src_pos.x < image.width ||
+		pixman_image_get_height(s) - src_pos.y < image.height) {
+		CANVAS_ERROR("bad src bitmap size");
+	}
+
+	if (rop3->brush.type == SPICE_BRUSH_TYPE_PATTERN) {
+		pixman_image_t *p = canvas_get_image(&canvas->base, rop3->brush.u.pattern.pat, FALSE);
+		SpicePoint pat_pos;
+
+		pat_pos.x = (bbox->left - rop3->brush.u.pattern.pos.x) % pixman_image_get_width(p);
+
+		pat_pos.y = (bbox->top - rop3->brush.u.pattern.pos.y) % pixman_image_get_height(p);
+
+		//for now (bottom-top)
+		if (pat_pos.y < 0) {
+			pat_pos.y = pixman_image_get_height(p) + pat_pos.y;
+		}
+		pat_pos.y = (image.height + pat_pos.y) % pixman_image_get_height(p);
+		pat_pos.y = pixman_image_get_height(p) - pat_pos.y;
+
+		do_rop3_with_pattern(rop3->rop3, d, s, &src_pos, p, &pat_pos);
+		pixman_image_unref(p);
+	} else {
+		uint32_t color = (canvas->base.color_shift) == 8 ? rop3->brush.u.color :
+														 canvas_16bpp_to_32bpp(rop3->brush.u.color);
+		do_rop3_with_color(rop3->rop3, d, s, &src_pos, color);
+	}
+
+	pixman_image_unref(s);
+
+	GLCRecti dest;
+	GLCRecti src;
+	dest.x = bbox->left;
+	dest.y = bbox->top;
+
+	image.pixels = copy_opposite_image(canvas, image.pixels, pixman_image_get_stride(d),
+									   pixman_image_get_height(d));
+
+	src.x = src.y = 0;
+	dest.width = src.width = image.width;
+	dest.height = src.height = image.height;
+	glc_draw_image(canvas->glc, &dest, &src, &image, 0, 1);
+	pixman_image_unref(d);
+}
+
+void do_rop3_with_pattern(uint8_t rop3, pixman_image_t *d, pixman_image_t *s, SpicePoint *src_pos,
+						  pixman_image_t *p, SpicePoint *pat_pos)
+{
+	int bpp;
+
+	bpp = spice_pixman_image_get_bpp(d);
+	ASSERT (bpp == spice_pixman_image_get_bpp(s));
+	ASSERT (bpp == spice_pixman_image_get_bpp(p));
+
+	if (bpp == 32) {
+		rop3_with_pattern_handlers_32[rop3](d, s, src_pos, p, pat_pos);
+	} else {
+		rop3_with_pattern_handlers_16[rop3](d, s, src_pos, p, pat_pos);
+	}
+}
+
+void do_rop3_with_color(uint8_t rop3, pixman_image_t *d, pixman_image_t *s, SpicePoint *src_pos,
+						uint32_t rgb)
+{
+	int bpp;
+
+	bpp = spice_pixman_image_get_bpp(d);
+	ASSERT (bpp == spice_pixman_image_get_bpp(s));
+
+	if (bpp == 32) {
+		rop3_with_color_handlers_32[rop3](d, s, src_pos, rgb);
+	} else {
+		rop3_with_color_handlers_16[rop3](d, s, src_pos, rgb);
+	}
+}
+
+static inline uint8_t *copy_opposite_image(GLCanvas *canvas, void *data, int stride, int height)
+{
+	uint8_t *ret_data = (uint8_t *)data;
+	uint8_t *dest;
+	uint8_t *src;
+	int i;
+
+	if (!canvas->private_data) {
+		canvas->private_data = spice_malloc_n(height, stride);
+		if (!canvas->private_data) {
+			return ret_data;
+		}
+		canvas->private_data_size = stride * height;
+	}
+
+	if (canvas->private_data_size < (stride * height)) {
+		free(canvas->private_data);
+		canvas->private_data = spice_malloc_n(height, stride);
+		if (!canvas->private_data) {
+			return ret_data;
+		}
+		canvas->private_data_size = stride * height;
+	}
+
+	dest = (uint8_t *)canvas->private_data;
+	src = (uint8_t *)data + (height - 1) * stride;
+
+	for (i = 0; i < height; ++i) {
+		memcpy(dest, src, stride);
+		dest += stride;
+		src -= stride;
+	}
+	return (uint8_t *)canvas->private_data;
+}
+
+#define ROP3_HANDLERS_DEPTH(name, formula, index, depth)                            \
+static void rop3_handle_p##depth##_##name(pixman_image_t *d, pixman_image_t *s,                 \
+                                          SpicePoint *src_pos,                                  \
+                                          pixman_image_t *p, SpicePoint *pat_pos)               \
+{                                                                                               \
+    int width = pixman_image_get_width(d);                                                      \
+    int height = pixman_image_get_height(d);                                                    \
+    uint8_t *dest_line = (uint8_t *)pixman_image_get_data(d);                                   \
+    int dest_stride = pixman_image_get_stride(d);                                               \
+    uint8_t *end_line = dest_line + height * dest_stride;                                       \
+                                                                                                \
+    int pat_width = pixman_image_get_width(p);                                                  \
+    int pat_height = pixman_image_get_height(p);                                                \
+    uint8_t *pat_base = (uint8_t *)pixman_image_get_data(p);                                    \
+    int pat_stride = pixman_image_get_stride(p);                                                \
+    int pat_v_offset = pat_pos->y;                                                              \
+                                                                                                \
+    int src_stride = pixman_image_get_stride(s);                                                \
+    uint8_t *src_line;                                                                          \
+    src_line = (uint8_t *)pixman_image_get_data(s) + src_pos->y * src_stride + (src_pos->x * depth / 8); \
+                                                                                                \
+    for (; dest_line < end_line; dest_line += dest_stride, src_line += src_stride) {            \
+        uint##depth##_t *dest = (uint##depth##_t *)dest_line;                                   \
+        uint##depth##_t *end = dest + width;                                                    \
+        uint##depth##_t *src = (uint##depth##_t *)src_line;                                     \
+                                                                                                \
+        int pat_h_offset = pat_pos->x;                                                          \
+                                                                                                \
+        for (; dest < end; dest++, src++) {                                                     \
+            uint##depth##_t *pat;                                                               \
+            pat  = (uint##depth##_t *)                                                          \
+                        (pat_base + pat_v_offset * pat_stride + (pat_h_offset * depth / 8));    \
+            *dest = formula;                                                                    \
+            pat_h_offset = (pat_h_offset + 1) % pat_width;                                      \
+        }                                                                                       \
+                                                                                                \
+        pat_v_offset = (pat_v_offset + 1) % pat_height;                                         \
+    }                                                                                           \
+}                                                                                               \
+                                                                                                \
+static void rop3_handle_c##depth##_##name(pixman_image_t *d, pixman_image_t *s,                 \
+                                          SpicePoint *src_pos,                                  \
+                                          uint32_t rgb)                                         \
+{                                                                                               \
+    int width = pixman_image_get_width(d);                                                      \
+    int height = pixman_image_get_height(d);                                                    \
+    uint8_t *dest_line = (uint8_t *)pixman_image_get_data(d);                                   \
+    int dest_stride = pixman_image_get_stride(d);                                               \
+    uint8_t *end_line = dest_line + height * dest_stride;                                       \
+    uint##depth##_t _pat = rgb;                                                                \
+    uint##depth##_t *pat = &_pat;                                                               \
+                                                                                                \
+    int src_stride = pixman_image_get_stride(s);                                                \
+    uint8_t *src_line;                                                                          \
+    src_line = (uint8_t *)                                                                      \
+        pixman_image_get_data(s) + src_pos->y * src_stride + (src_pos->x * depth / 8);          \
+                                                                                                \
+    for (; dest_line < end_line; dest_line += dest_stride, src_line += src_stride) {            \
+        uint##depth##_t *dest = (uint##depth##_t *)dest_line;                                   \
+        uint##depth##_t *end = dest + width;                                                    \
+        uint##depth##_t *src = (uint##depth##_t *)src_line;                                     \
+        for (; dest < end; dest++, src++) {                                                     \
+            *dest = formula;                                                                    \
+        }                                                                                       \
+    }                                                                                           \
+}                                                                                               \
+                                                                                                \
+static void rop3_test##depth##_##name(void)                                                     \
+{                                                                                               \
+    uint8_t d = 0xaa;                                                                           \
+    uint8_t s = 0xcc;                                                                           \
+    uint8_t p = 0xf0;                                                                           \
+    uint8_t *pat = &p;                                                                          \
+    uint8_t *src = &s;                                                                          \
+    uint8_t *dest = &d;                                                                         \
+                                                                                                \
+    d = formula;                                                                                \
+    if (d != index) {                                                                           \
+        printf("%s: failed, result is 0x%x expect 0x%x\n", __FUNCTION__, d, index);             \
+    }                                                                                           \
+}

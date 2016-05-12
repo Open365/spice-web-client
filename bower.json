@@ -1,0 +1,30 @@
+{
+  "name": "spice-web-client",
+  "version": "1.4.245",
+  "authors": [
+    "eyeos"
+  ],
+  "description": "SPICE client root module",
+  "main": [
+    "all_compiled.js",
+    "application/WorkerProcess_c.js",
+    "lib/jquery-2.0.3.js",
+    "lib/lodash.4.0.0.min.js",
+    "lib/base64.js",
+    "lib/biginteger.js",
+    "lib/bowser.js",
+    "lib/jgestures.min.js",
+    "lib/modernizr.js",
+    "lib/pixastic.js",
+    "lib/virtualjoystick.js",
+    "lib/jsbn.js",
+    "lib/jsbn2.js",
+    "lib/prng4.js",
+    "lib/rng.js",
+    "lib/sha1.js",
+    "lib/prettyprint.js",
+    "lib/encrypt.js",
+    "lib/jquery-mousewheel.js"
+  ],
+  "license": "AGPL-3.0"
+}

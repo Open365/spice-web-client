@@ -1,0 +1,13 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: spice
+Description: SPICE server library
+Version: 0.12.0
+
+Requires.private:  pixman-1 >= 0.17.7 celt051 >= 0.5.1.1 openssl
+Libs: -L${libdir} -lspice-server
+Libs.private:  -pthread -lm -lrt 
+Cflags: -I${includedir}/spice-server

@@ -1,0 +1,13 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: cacard
+Description: SPICE server library
+Version: 0.1.2
+
+Requires:  nss
+Libs: -L${libdir} -lcacard
+Libs.private:  -pthread
+Cflags: -I${includedir}/cacard

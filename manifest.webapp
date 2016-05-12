@@ -1,0 +1,20 @@
+{
+  "name": "VDI test",
+  "description": "Test app for VDI",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/eyeos128.png"
+  },
+  "developer": {
+    "name": "eyeOS",
+    "url": "http://eyeos.com"
+  },
+  "default_locale": "en",
+  "fullscreen": "true",
+  "type": "privileged",
+  "permissions" : {
+    "tcp-socket" : {
+      "description" : "Create TCP sockets and communicate over them."
+    }
+  }
+}

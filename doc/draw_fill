@@ -1,0 +1,140 @@
+DisplayBase
+	surface_id 32
+	SpiceRect
+		top 32
+		left 32
+		bottom 32
+		right 32
+	SpiceClip
+		type 8
+		[ SpiceClipRects 
+			num_rects 32
+			[ SpiceRect ]
+		]
+SpiceBrush
+	type 8
+	[ color 32 ]
+	or
+	[ SpicePattern
+		offset 32
+		position SpicePoint
+			x 32
+			y 32
+	]
+rop_descriptor 16
+SpiceQMask
+	flags 8
+	pos SpicePoint
+	offset 32
+[ SpiceImage (brush) ]
+[ SpiceImage (qmask) ]
+
+
+static void canvas_draw_fill(SpiceCanvas *spice_canvas, SpiceRect *bbox, SpiceClip *clip, SpiceFill *fill)
+{
+	CanvasBase *canvas = (CanvasBase *)spice_canvas;
+	pixman_region32_t dest_region;
+	SpiceROP rop;
+
+	pixman_region32_init_rect(&dest_region,
+							  bbox->left, bbox->top,
+							  bbox->right - bbox->left,
+							  bbox->bottom - bbox->top);
+
+
+	canvas_clip_pixman(canvas, &dest_region, clip);
+	canvas_mask_pixman(canvas, &dest_region, &fill->mask,
+					   bbox->left, bbox->top);
+
+	rop = ropd_descriptor_to_rop(fill->rop_descriptor,
+								 ROP_INPUT_BRUSH,
+								 ROP_INPUT_DEST);
+
+	if (rop == SPICE_ROP_NOOP || !pixman_region32_not_empty(&dest_region)) {
+		touch_brush(canvas, &fill->brush);
+		pixman_region32_fini(&dest_region);
+		return;
+	}
+
+	draw_brush(spice_canvas, &dest_region, &fill->brush, rop);
+
+	pixman_region32_fini(&dest_region);
+}
+
+static void draw_brush(SpiceCanvas *canvas,
+					   pixman_region32_t *region,
+					   SpiceBrush *brush,
+					   SpiceROP rop)
+{
+	CanvasBase *canvas_base = (CanvasBase *)canvas;
+	uint32_t color;
+	SpicePattern *pattern;
+	pixman_image_t *tile;
+	int offset_x, offset_y;
+	pixman_box32_t *rects;
+	int n_rects;
+
+	rects = pixman_region32_rectangles(region, &n_rects);
+
+   switch (brush->type) {
+	case SPICE_BRUSH_TYPE_SOLID:
+		color = brush->u.color;
+		if (rop == SPICE_ROP_COPY) {
+			canvas->ops->fill_solid_rects(canvas, rects, n_rects, color);
+		} else {
+			canvas->ops->fill_solid_rects_rop(canvas, rects, n_rects, color, rop);
+		}
+		break;
+		case SPICE_BRUSH_TYPE_PATTERN: {
+		SpiceCanvas *surface_canvas;
+
+		pattern = &brush->u.pattern;
+		offset_x = pattern->pos.x;
+		offset_y = pattern->pos.y;
+
+		surface_canvas = canvas_get_surface(canvas_base, pattern->pat);
+		if (surface_canvas) {
+			if (rop == SPICE_ROP_COPY) {
+				canvas->ops->fill_tiled_rects_from_surface(canvas, rects, n_rects, surface_canvas,
+														   offset_x, offset_y);
+			} else {
+				canvas->ops->fill_tiled_rects_rop_from_surface(canvas, rects, n_rects,
+															   surface_canvas, offset_x, offset_y,
+															   rop);
+			}
+		} else {
+			tile = canvas_get_image(canvas_base, pattern->pat, FALSE);
+			if (rop == SPICE_ROP_COPY) {
+				canvas->ops->fill_tiled_rects(canvas, rects, n_rects, tile, offset_x, offset_y);
+			} else {
+				canvas->ops->fill_tiled_rects_rop(canvas, rects, n_rects,
+												  tile, offset_x, offset_y, rop);
+			}
+			pixman_image_unref(tile);
+		}
+		break;
+	}
+	case SPICE_BRUSH_TYPE_NONE:
+		/* Still need to do *something* here, because rop could be e.g invert dest */
+		canvas->ops->fill_solid_rects_rop(canvas, rects, n_rects, 0, rop);
+		break;
+	default:
+		CANVAS_ERROR("invalid brush type");
+	}
+}
+
+/* If we're exiting early we may still have to load an image in case
+   it has to be cached or something */
+static void touch_brush(CanvasBase *canvas, SpiceBrush *brush)
+{
+	SpicePattern *pattern;
+
+	if (brush->type == SPICE_BRUSH_TYPE_PATTERN) {
+		pattern = &brush->u.pattern;
+		canvas_touch_image(canvas, pattern->pat);
+	}
+}
+
+static void gdi_canvas_draw_stroke(SpiceCanvas *spice_canvas, SpiceRect *bbox, SpiceClip *clip, SpiceStroke *stroke)
+gdi_canvas.c 1625
+

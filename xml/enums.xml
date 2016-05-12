@@ -1,0 +1,909 @@
+<?xml version="1.0"?>
+<GCC_XML cvs_revision="1.135">
+  <Namespace id="_1" name="::" members="_3 _4 _5 _6 _7 _8 _9 _10 _11 _12 _14 _13 _15 _16 _17 _18 _20 _19 _21 _23 _22 _24 _25 _26 _27 _28 _29 _30 _31 _32 _33 _34 _35 _36 _37 _38 _39 _40 _41 _42 _43 _44 _45 _46 _47 _48 _49 _50 _52 _51 _53 _54 _55 _57 _56 _58 _59 _60 _61 _62 _63 _64 _65 _66 _67 _68 _69 _71 _70 _73 _72 _74 _75 _76 _77 _79 _78 _81 _80 _83 _82 _84 _85 _86 _88 _87 _89 _90 _91 _92 _93 _94 _95 _96 _97 _98 _100 _99 _101 _103 _102 _104 _105 _107 _106 _109 _108 _110 _111 _112 _113 _114 _115 _117 _116 _119 _118 _120 _121 _122 _123 _124 _125 _126 _127 _128 _130 _129 _132 _131 _2 _133 _134 _135 _136 _137 _138 _139 _141 _140 _142 _143 _144 _145 _146 _147 _148 _150 _149 _151 _152 _153 _155 _154 _157 _156 _159 _158 _161 _160 _163 _162 _165 _164 _166 _167 _168 _169 _170 _171 _172 _173 _174 _176 _175 _177 _178 _179 _180 _182 _181 _183 _184 _185 _186 _187 _188 _189 _191 _190 _192 _193 _194 _195 _196 _197 _198 _199 _201 _200 _202 _203 _204 _205 _206 _207 _208 _209 _210 _211 _212 _213 _215 _214 _217 _216 _218 _220 _219 _222 _221 _224 _223 _225 _226 _227 _228 " mangled="_Z2::" demangled="::"/>
+  <Namespace id="_2" name="std" context="_1" members="" mangled="_Z3std" demangled="std"/>
+  <Function id="_3" name="__builtin_nans" returns="_229" context="_1" location="f0:21" file="f0" line="21" extern="1" attributes="nothrow const nonnull">
+    <Argument name="str" type="_230" location="f0:21" file="f0" line="21"/>
+  </Function>
+  <Function id="_4" name="__builtin_acosf" returns="_231" context="_1" mangled="acosf" location="f0:25" file="f0" line="25" extern="1" attributes="nothrow">
+    <Argument type="_231" location="f0:25" file="f0" line="25"/>
+  </Function>
+  <Function id="_5" name="__builtin_acosl" returns="_232" context="_1" mangled="acosl" location="f0:26" file="f0" line="26" extern="1" attributes="nothrow">
+    <Argument type="_232" location="f0:26" file="f0" line="26"/>
+  </Function>
+  <Function id="_6" name="__builtin_va_arg_pack" returns="_233" context="_1" location="f0:147" file="f0" line="147" extern="1">
+    <Ellipsis/>
+  </Function>
+  <Function id="_7" name="__builtin_log10" returns="_229" context="_1" mangled="log10" location="f0:63" file="f0" line="63" extern="1" attributes="nothrow">
+    <Argument type="_229" location="f0:63" file="f0" line="63"/>
+  </Function>
+  <Function id="_8" name="__builtin_popcountll" returns="_234" context="_1" location="f0:101" file="f0" line="101" extern="1" attributes="nothrow const">
+    <Argument type="_235" location="f0:101" file="f0" line="101"/>
+  </Function>
+  <Function id="_9" name="__builtin_clogf" returns="_236" context="_1" mangled="clogf" location="f0:111" file="f0" line="111" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_236" location="f0:111" file="f0" line="111"/>
+  </Function>
+  <Function id="_10" name="__builtin_clogl" returns="_237" context="_1" mangled="clogl" location="f0:113" file="f0" line="113" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_237" location="f0:113" file="f0" line="113"/>
+  </Function>
+  <Function id="_11" name="__builtin_cexpf" returns="_236" context="_1" mangled="cexpf" location="f0:108" file="f0" line="108" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_236" location="f0:108" file="f0" line="108"/>
+  </Function>
+  <Function id="_12" name="__builtin_cexpl" returns="_237" context="_1" mangled="cexpl" location="f0:110" file="f0" line="110" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_237" location="f0:110" file="f0" line="110"/>
+  </Function>
+  <Enumeration id="_13" name="SpicePubkeyType" context="_1" location="f1:64" file="f1" line="64" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_PUBKEY_TYPE_INVALID" init="0"/>
+    <EnumValue name="SPICE_PUBKEY_TYPE_RSA" init="1"/>
+    <EnumValue name="SPICE_PUBKEY_TYPE_RSA2" init="2"/>
+    <EnumValue name="SPICE_PUBKEY_TYPE_DSA" init="3"/>
+    <EnumValue name="SPICE_PUBKEY_TYPE_DSA1" init="4"/>
+    <EnumValue name="SPICE_PUBKEY_TYPE_DSA2" init="5"/>
+    <EnumValue name="SPICE_PUBKEY_TYPE_DSA3" init="6"/>
+    <EnumValue name="SPICE_PUBKEY_TYPE_DSA4" init="7"/>
+    <EnumValue name="SPICE_PUBKEY_TYPE_DH" init="8"/>
+    <EnumValue name="SPICE_PUBKEY_TYPE_EC" init="9"/>
+    <EnumValue name="SPICE_PUBKEY_TYPE_ENUM_END" init="10"/>
+  </Enumeration>
+  <Typedef id="_14" name="SpicePubkeyType" type="_13" context="_1" location="f1:77" file="f1" line="77"/>
+  <Function id="_15" name="__builtin_isless" returns="_233" context="_1" location="f0:141" file="f0" line="141" extern="1" attributes="nothrow const">
+    <Ellipsis/>
+  </Function>
+  <Function id="_16" name="__builtin_isnormal" returns="_233" context="_1" location="f0:145" file="f0" line="145" extern="1">
+    <Ellipsis/>
+  </Function>
+  <Function id="_17" name="__builtin_asinf" returns="_231" context="_1" mangled="asinf" location="f0:28" file="f0" line="28" extern="1" attributes="nothrow">
+    <Argument type="_231" location="f0:28" file="f0" line="28"/>
+  </Function>
+  <Function id="_18" name="__builtin_asinl" returns="_232" context="_1" mangled="asinl" location="f0:29" file="f0" line="29" extern="1" attributes="nothrow">
+    <Argument type="_232" location="f0:29" file="f0" line="29"/>
+  </Function>
+  <Enumeration id="_19" name="SpiceWarnCode" context="_1" location="f1:22" file="f1" line="22" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_WARN_GENERAL" init="0"/>
+    <EnumValue name="SPICE_WARN_CODE_ENUM_END" init="1"/>
+  </Enumeration>
+  <Typedef id="_20" name="SpiceWarnCode" type="_19" context="_1" location="f1:26" file="f1" line="26"/>
+  <Function id="_21" name="__builtin_popcount" returns="_234" context="_1" location="f0:99" file="f0" line="99" extern="1" attributes="nothrow const">
+    <Argument type="_234" location="f0:99" file="f0" line="99"/>
+  </Function>
+  <Enumeration id="_22" name="SpiceLineFlags" context="_1" location="f1:198" file="f1" line="198" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_LINE_FLAGS_START_WITH_GAP" init="4"/>
+    <EnumValue name="SPICE_LINE_FLAGS_STYLED" init="8"/>
+    <EnumValue name="SPICE_LINE_FLAGS_MASK" init="12"/>
+  </Enumeration>
+  <Typedef id="_23" name="SpiceLineFlags" type="_22" context="_1" location="f1:203" file="f1" line="203"/>
+  <Function id="_24" name="__builtin_nansf" returns="_231" context="_1" location="f0:22" file="f0" line="22" extern="1" attributes="nothrow const nonnull">
+    <Argument name="str" type="_230" location="f0:22" file="f0" line="22"/>
+  </Function>
+  <Function id="_25" name="__builtin_nansl" returns="_232" context="_1" location="f0:23" file="f0" line="23" extern="1" attributes="nothrow const nonnull">
+    <Argument name="str" type="_230" location="f0:23" file="f0" line="23"/>
+  </Function>
+  <Function id="_26" name="__builtin_floorf" returns="_231" context="_1" mangled="floorf" location="f0:52" file="f0" line="52" extern="1" attributes="nothrow const">
+    <Argument type="_231" location="f0:52" file="f0" line="52"/>
+  </Function>
+  <Function id="_27" name="__builtin_floorl" returns="_232" context="_1" mangled="floorl" location="f0:53" file="f0" line="53" extern="1" attributes="nothrow const">
+    <Argument type="_232" location="f0:53" file="f0" line="53"/>
+  </Function>
+  <Function id="_28" name="__builtin_ctanf" returns="_236" context="_1" mangled="ctanf" location="f0:123" file="f0" line="123" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_236" location="f0:123" file="f0" line="123"/>
+  </Function>
+  <Function id="_29" name="__builtin_ctanh" returns="_238" context="_1" mangled="ctanh" location="f0:127" file="f0" line="127" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_238" location="f0:127" file="f0" line="127"/>
+  </Function>
+  <Function id="_30" name="__builtin_ctanl" returns="_237" context="_1" mangled="ctanl" location="f0:125" file="f0" line="125" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_237" location="f0:125" file="f0" line="125"/>
+  </Function>
+  <Function id="_31" name="__builtin_carg" returns="_229" context="_1" mangled="carg" location="f0:94" file="f0" line="94" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_238" location="f0:94" file="f0" line="94"/>
+  </Function>
+  <Function id="_32" name="__builtin_clog" returns="_238" context="_1" mangled="clog" location="f0:112" file="f0" line="112" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_238" location="f0:112" file="f0" line="112"/>
+  </Function>
+  <Function id="_33" name="__builtin_logf" returns="_231" context="_1" mangled="logf" location="f0:66" file="f0" line="66" extern="1" attributes="nothrow">
+    <Argument type="_231" location="f0:66" file="f0" line="66"/>
+  </Function>
+  <Function id="_34" name="__builtin_logl" returns="_232" context="_1" mangled="logl" location="f0:67" file="f0" line="67" extern="1" attributes="nothrow">
+    <Argument type="_232" location="f0:67" file="f0" line="67"/>
+  </Function>
+  <Function id="_35" name="__builtin_fabs" returns="_229" context="_1" mangled="fabs" location="f0:48" file="f0" line="48" extern="1" attributes="nothrow const">
+    <Argument type="_229" location="f0:48" file="f0" line="48"/>
+  </Function>
+  <Function id="_36" name="__builtin_expf" returns="_231" context="_1" mangled="expf" location="f0:46" file="f0" line="46" extern="1" attributes="nothrow">
+    <Argument type="_231" location="f0:46" file="f0" line="46"/>
+  </Function>
+  <Function id="_37" name="__builtin_expl" returns="_232" context="_1" mangled="expl" location="f0:47" file="f0" line="47" extern="1" attributes="nothrow">
+    <Argument type="_232" location="f0:47" file="f0" line="47"/>
+  </Function>
+  <Function id="_38" name="__builtin_isunordered" returns="_233" context="_1" location="f0:146" file="f0" line="146" extern="1" attributes="nothrow const">
+    <Ellipsis/>
+  </Function>
+  <Function id="_39" name="__builtin_csqrt" returns="_238" context="_1" mangled="csqrt" location="f0:121" file="f0" line="121" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_238" location="f0:121" file="f0" line="121"/>
+  </Function>
+  <Function id="_40" name="__builtin_sin" returns="_229" context="_1" mangled="sin" location="f0:75" file="f0" line="75" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_229" location="f0:75" file="f0" line="75"/>
+  </Function>
+  <Function id="_41" name="__builtin_ldexpf" returns="_231" context="_1" mangled="ldexpf" location="f0:60" file="f0" line="60" extern="1" attributes="nothrow">
+    <Argument type="_231" location="f0:60" file="f0" line="60"/>
+    <Argument type="_234" location="f0:60" file="f0" line="60"/>
+  </Function>
+  <Function id="_42" name="__builtin_ldexpl" returns="_232" context="_1" mangled="ldexpl" location="f0:61" file="f0" line="61" extern="1" attributes="nothrow">
+    <Argument type="_232" location="f0:61" file="f0" line="61"/>
+    <Argument type="_234" location="f0:61" file="f0" line="61"/>
+  </Function>
+  <Function id="_43" name="__builtin_isinf_sign" returns="_233" context="_1" location="f0:140" file="f0" line="140" extern="1">
+    <Ellipsis/>
+  </Function>
+  <Function id="_44" name="__builtin_islessequal" returns="_233" context="_1" location="f0:142" file="f0" line="142" extern="1" attributes="nothrow const">
+    <Ellipsis/>
+  </Function>
+  <Function id="_45" name="__builtin_tanf" returns="_231" context="_1" mangled="tanf" location="f0:85" file="f0" line="85" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_231" location="f0:85" file="f0" line="85"/>
+  </Function>
+  <Function id="_46" name="__builtin_tanh" returns="_229" context="_1" mangled="tanh" location="f0:86" file="f0" line="86" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_229" location="f0:86" file="f0" line="86"/>
+  </Function>
+  <Function id="_47" name="__builtin_tanl" returns="_232" context="_1" mangled="tanl" location="f0:89" file="f0" line="89" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_232" location="f0:89" file="f0" line="89"/>
+  </Function>
+  <Function id="_48" name="__builtin_ceil" returns="_229" context="_1" mangled="ceil" location="f0:36" file="f0" line="36" extern="1" attributes="nothrow const">
+    <Argument type="_229" location="f0:36" file="f0" line="36"/>
+  </Function>
+  <Function id="_49" name="__builtin_fmodf" returns="_231" context="_1" mangled="fmodf" location="f0:54" file="f0" line="54" extern="1" attributes="nothrow">
+    <Argument type="_231" location="f0:54" file="f0" line="54"/>
+    <Argument type="_231" location="f0:54" file="f0" line="54"/>
+  </Function>
+  <Function id="_50" name="__builtin_fmodl" returns="_232" context="_1" mangled="fmodl" location="f0:55" file="f0" line="55" extern="1" attributes="nothrow">
+    <Argument type="_232" location="f0:55" file="f0" line="55"/>
+    <Argument type="_232" location="f0:55" file="f0" line="55"/>
+  </Function>
+  <Enumeration id="_51" name="SpiceNotifyVisibility" context="_1" location="f1:49" file="f1" line="49" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_NOTIFY_VISIBILITY_LOW" init="0"/>
+    <EnumValue name="SPICE_NOTIFY_VISIBILITY_MEDIUM" init="1"/>
+    <EnumValue name="SPICE_NOTIFY_VISIBILITY_HIGH" init="2"/>
+    <EnumValue name="SPICE_NOTIFY_VISIBILITY_ENUM_END" init="3"/>
+  </Enumeration>
+  <Typedef id="_52" name="SpiceNotifyVisibility" type="_51" context="_1" location="f1:55" file="f1" line="55"/>
+  <Function id="_53" name="__builtin_return" returns="_239" context="_1" location="f0:13" file="f0" line="13" extern="1" attributes="nothrow noreturn">
+    <Argument name="RESULT" type="_240" location="f0:13" file="f0" line="13"/>
+  </Function>
+  <Enumeration id="_54" name="._2" context="_1" location="f1:348" file="f1" line="348" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSGC_ACK_SYNC" init="1"/>
+    <EnumValue name="SPICE_MSGC_ACK" init="2"/>
+    <EnumValue name="SPICE_MSGC_PONG" init="3"/>
+    <EnumValue name="SPICE_MSGC_MIGRATE_FLUSH_MARK" init="4"/>
+    <EnumValue name="SPICE_MSGC_MIGRATE_DATA" init="5"/>
+    <EnumValue name="SPICE_MSGC_DISCONNECTING" init="6"/>
+  </Enumeration>
+  <Enumeration id="_55" name="._3" context="_1" location="f1:357" file="f1" line="357" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSG_MAIN_MIGRATE_BEGIN" init="101"/>
+    <EnumValue name="SPICE_MSG_MAIN_MIGRATE_CANCEL" init="102"/>
+    <EnumValue name="SPICE_MSG_MAIN_INIT" init="103"/>
+    <EnumValue name="SPICE_MSG_MAIN_CHANNELS_LIST" init="104"/>
+    <EnumValue name="SPICE_MSG_MAIN_MOUSE_MODE" init="105"/>
+    <EnumValue name="SPICE_MSG_MAIN_MULTI_MEDIA_TIME" init="106"/>
+    <EnumValue name="SPICE_MSG_MAIN_AGENT_CONNECTED" init="107"/>
+    <EnumValue name="SPICE_MSG_MAIN_AGENT_DISCONNECTED" init="108"/>
+    <EnumValue name="SPICE_MSG_MAIN_AGENT_DATA" init="109"/>
+    <EnumValue name="SPICE_MSG_MAIN_AGENT_TOKEN" init="110"/>
+    <EnumValue name="SPICE_MSG_MAIN_MIGRATE_SWITCH_HOST" init="111"/>
+    <EnumValue name="SPICE_MSG_MAIN_MIGRATE_END" init="112"/>
+    <EnumValue name="SPICE_MSG_END_MAIN" init="113"/>
+  </Enumeration>
+  <Enumeration id="_56" name="SpiceInfoCode" context="_1" location="f1:28" file="f1" line="28" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_INFO_GENERAL" init="0"/>
+    <EnumValue name="SPICE_INFO_CODE_ENUM_END" init="1"/>
+  </Enumeration>
+  <Typedef id="_57" name="SpiceInfoCode" type="_56" context="_1" location="f1:32" file="f1" line="32"/>
+  <Enumeration id="_58" name="._6" context="_1" location="f1:420" file="f1" line="420" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSGC_DISPLAY_INIT" init="101"/>
+    <EnumValue name="SPICE_MSGC_END_DISPLAY" init="102"/>
+  </Enumeration>
+  <Function id="_59" name="__builtin_sqrt" returns="_229" context="_1" mangled="sqrt" location="f0:81" file="f0" line="81" extern="1" attributes="nothrow">
+    <Argument type="_229" location="f0:81" file="f0" line="81"/>
+  </Function>
+  <Function id="_60" name="__builtin_cpow" returns="_238" context="_1" mangled="cpow" location="f0:130" file="f0" line="130" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_238" location="f0:130" file="f0" line="130"/>
+    <Argument type="_238" location="f0:130" file="f0" line="130"/>
+  </Function>
+  <Function id="_61" name="__builtin_coshf" returns="_231" context="_1" mangled="coshf" location="f0:42" file="f0" line="42" extern="1" attributes="nothrow">
+    <Argument type="_231" location="f0:42" file="f0" line="42"/>
+  </Function>
+  <Function id="_62" name="__builtin_coshl" returns="_232" context="_1" mangled="coshl" location="f0:43" file="f0" line="43" extern="1" attributes="nothrow">
+    <Argument type="_232" location="f0:43" file="f0" line="43"/>
+  </Function>
+  <Function id="_63" name="__builtin_cexp" returns="_238" context="_1" mangled="cexp" location="f0:109" file="f0" line="109" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_238" location="f0:109" file="f0" line="109"/>
+  </Function>
+  <Function id="_64" name="__builtin_atan2" returns="_229" context="_1" mangled="atan2" location="f0:31" file="f0" line="31" extern="1" attributes="nothrow">
+    <Argument type="_229" location="f0:31" file="f0" line="31"/>
+    <Argument type="_229" location="f0:31" file="f0" line="31"/>
+  </Function>
+  <Function id="_65" name="__builtin_memchr" returns="_240" context="_1" location="f0:12" file="f0" line="12" extern="1">
+    <Argument type="_241" location="f0:12" file="f0" line="12"/>
+    <Argument type="_234" location="f0:12" file="f0" line="12"/>
+    <Argument type="_242" location="f0:12" file="f0" line="12"/>
+  </Function>
+  <Function id="_66" name="__builtin_atanf" returns="_231" context="_1" mangled="atanf" location="f0:34" file="f0" line="34" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_231" location="f0:34" file="f0" line="34"/>
+  </Function>
+  <Function id="_67" name="__builtin_atanl" returns="_232" context="_1" mangled="atanl" location="f0:35" file="f0" line="35" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_232" location="f0:35" file="f0" line="35"/>
+  </Function>
+  <Function id="_68" name="__builtin_ctan" returns="_238" context="_1" mangled="ctan" location="f0:124" file="f0" line="124" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_238" location="f0:124" file="f0" line="124"/>
+  </Function>
+  <Function id="_69" name="__builtin_log" returns="_229" context="_1" mangled="log" location="f0:62" file="f0" line="62" extern="1" attributes="nothrow">
+    <Argument type="_229" location="f0:62" file="f0" line="62"/>
+  </Function>
+  <Enumeration id="_70" name="SpiceTunnelServiceType" context="_1" location="f1:308" file="f1" line="308" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_TUNNEL_SERVICE_TYPE_INVALID" init="0"/>
+    <EnumValue name="SPICE_TUNNEL_SERVICE_TYPE_GENERIC" init="1"/>
+    <EnumValue name="SPICE_TUNNEL_SERVICE_TYPE_IPP" init="2"/>
+    <EnumValue name="SPICE_TUNNEL_SERVICE_TYPE_ENUM_END" init="3"/>
+  </Enumeration>
+  <Typedef id="_71" name="SpiceTunnelServiceType" type="_70" context="_1" location="f1:314" file="f1" line="314"/>
+  <Enumeration id="_72" name="SpiceJpegAlphaFlags" context="_1" location="f1:169" file="f1" line="169" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_JPEG_ALPHA_FLAGS_TOP_DOWN" init="1"/>
+    <EnumValue name="SPICE_JPEG_ALPHA_FLAGS_MASK" init="1"/>
+  </Enumeration>
+  <Typedef id="_73" name="SpiceJpegAlphaFlags" type="_72" context="_1" location="f1:173" file="f1" line="173"/>
+  <Function id="_74" name="__builtin_isfinite" returns="_233" context="_1" location="f0:136" file="f0" line="136" extern="1">
+    <Ellipsis/>
+  </Function>
+  <Function id="_75" name="__builtin_asin" returns="_229" context="_1" mangled="asin" location="f0:27" file="f0" line="27" extern="1" attributes="nothrow">
+    <Argument type="_229" location="f0:27" file="f0" line="27"/>
+  </Function>
+  <Function id="_76" name="__builtin_frexp" returns="_229" context="_1" mangled="frexp" location="f0:56" file="f0" line="56" extern="1" attributes="nothrow">
+    <Argument type="_229" location="f0:56" file="f0" line="56"/>
+    <Argument type="_243" location="f0:56" file="f0" line="56"/>
+  </Function>
+  <Function id="_77" name="__builtin_isgreaterequal" returns="_233" context="_1" location="f0:138" file="f0" line="138" extern="1" attributes="nothrow const">
+    <Ellipsis/>
+  </Function>
+  <Enumeration id="_78" name="SpiceMaskFlags" context="_1" location="f1:115" file="f1" line="115" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MASK_FLAGS_INVERS" init="1"/>
+    <EnumValue name="SPICE_MASK_FLAGS_MASK" init="1"/>
+  </Enumeration>
+  <Typedef id="_79" name="SpiceMaskFlags" type="_78" context="_1" location="f1:119" file="f1" line="119"/>
+  <Enumeration id="_80" name="SpiceCursorType" context="_1" location="f1:273" file="f1" line="273" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_CURSOR_TYPE_ALPHA" init="0"/>
+    <EnumValue name="SPICE_CURSOR_TYPE_MONO" init="1"/>
+    <EnumValue name="SPICE_CURSOR_TYPE_COLOR4" init="2"/>
+    <EnumValue name="SPICE_CURSOR_TYPE_COLOR8" init="3"/>
+    <EnumValue name="SPICE_CURSOR_TYPE_COLOR16" init="4"/>
+    <EnumValue name="SPICE_CURSOR_TYPE_COLOR24" init="5"/>
+    <EnumValue name="SPICE_CURSOR_TYPE_COLOR32" init="6"/>
+    <EnumValue name="SPICE_CURSOR_TYPE_ENUM_END" init="7"/>
+  </Enumeration>
+  <Typedef id="_81" name="SpiceCursorType" type="_80" context="_1" location="f1:283" file="f1" line="283"/>
+  <Enumeration id="_82" name="SpiceBrushType" context="_1" location="f1:107" file="f1" line="107" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_BRUSH_TYPE_NONE" init="0"/>
+    <EnumValue name="SPICE_BRUSH_TYPE_SOLID" init="1"/>
+    <EnumValue name="SPICE_BRUSH_TYPE_PATTERN" init="2"/>
+    <EnumValue name="SPICE_BRUSH_TYPE_ENUM_END" init="3"/>
+  </Enumeration>
+  <Typedef id="_83" name="SpiceBrushType" type="_82" context="_1" location="f1:113" file="f1" line="113"/>
+  <Function id="_84" name="__builtin_log10f" returns="_231" context="_1" mangled="log10f" location="f0:64" file="f0" line="64" extern="1" attributes="nothrow">
+    <Argument type="_231" location="f0:64" file="f0" line="64"/>
+  </Function>
+  <Function id="_85" name="__builtin_log10l" returns="_232" context="_1" mangled="log10l" location="f0:65" file="f0" line="65" extern="1" attributes="nothrow">
+    <Argument type="_232" location="f0:65" file="f0" line="65"/>
+  </Function>
+  <Function id="_86" name="__builtin_ctzl" returns="_234" context="_1" location="f0:97" file="f0" line="97" extern="1" attributes="nothrow const">
+    <Argument type="_244" location="f0:97" file="f0" line="97"/>
+  </Function>
+  <Enumeration id="_87" name="SpiceAudioDataMode" context="_1" location="f1:293" file="f1" line="293" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_AUDIO_DATA_MODE_INVALID" init="0"/>
+    <EnumValue name="SPICE_AUDIO_DATA_MODE_RAW" init="1"/>
+    <EnumValue name="SPICE_AUDIO_DATA_MODE_CELT_0_5_1" init="2"/>
+    <EnumValue name="SPICE_AUDIO_DATA_MODE_ENUM_END" init="3"/>
+  </Enumeration>
+  <Typedef id="_88" name="SpiceAudioDataMode" type="_87" context="_1" location="f1:299" file="f1" line="299"/>
+  <Function id="_89" name="__builtin_powif" returns="_231" context="_1" location="f0:73" file="f0" line="73" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_231" location="f0:73" file="f0" line="73"/>
+    <Argument type="_234" location="f0:73" file="f0" line="73"/>
+  </Function>
+  <Function id="_90" name="__builtin_powil" returns="_232" context="_1" location="f0:74" file="f0" line="74" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_232" location="f0:74" file="f0" line="74"/>
+    <Argument type="_234" location="f0:74" file="f0" line="74"/>
+  </Function>
+  <Function id="_91" name="__builtin_modff" returns="_231" context="_1" mangled="modff" location="f0:68" file="f0" line="68" extern="1" attributes="nothrow">
+    <Argument type="_231" location="f0:68" file="f0" line="68"/>
+    <Argument type="_245" location="f0:68" file="f0" line="68"/>
+  </Function>
+  <Function id="_92" name="__builtin_exp" returns="_229" context="_1" mangled="exp" location="f0:45" file="f0" line="45" extern="1" attributes="nothrow">
+    <Argument type="_229" location="f0:45" file="f0" line="45"/>
+  </Function>
+  <Function id="_93" name="__builtin_modfl" returns="_232" context="_1" mangled="modfl" location="f0:69" file="f0" line="69" extern="1" attributes="nothrow">
+    <Argument type="_232" location="f0:69" file="f0" line="69"/>
+    <Argument type="_246" location="f0:69" file="f0" line="69"/>
+  </Function>
+  <Function id="_94" name="__builtin_prefetch" returns="_239" context="_1" location="f0:17" file="f0" line="17" extern="1" attributes="no vops">
+    <Argument name="ADDR" type="_241" location="f0:17" file="f0" line="17"/>
+    <Ellipsis/>
+  </Function>
+  <Function id="_95" name="__builtin_tan" returns="_229" context="_1" mangled="tan" location="f0:84" file="f0" line="84" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_229" location="f0:84" file="f0" line="84"/>
+  </Function>
+  <Function id="_96" name="__builtin_fabsf" returns="_231" context="_1" mangled="fabsf" location="f0:49" file="f0" line="49" extern="1" attributes="nothrow const">
+    <Argument type="_231" location="f0:49" file="f0" line="49"/>
+  </Function>
+  <Function id="_97" name="__builtin_fabsl" returns="_232" context="_1" mangled="fabsl" location="f0:50" file="f0" line="50" extern="1" attributes="nothrow const">
+    <Argument type="_232" location="f0:50" file="f0" line="50"/>
+  </Function>
+  <Function id="_98" name="__builtin_inf" returns="_229" context="_1" location="f0:18" file="f0" line="18" extern="1" attributes="nothrow const"/>
+  <Enumeration id="_99" name="SpiceAudioFmt" context="_1" location="f1:301" file="f1" line="301" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_AUDIO_FMT_INVALID" init="0"/>
+    <EnumValue name="SPICE_AUDIO_FMT_S16" init="1"/>
+    <EnumValue name="SPICE_AUDIO_FMT_ENUM_END" init="2"/>
+  </Enumeration>
+  <Typedef id="_100" name="SpiceAudioFmt" type="_99" context="_1" location="f1:306" file="f1" line="306"/>
+  <Namespace id="_101" name="__cxxabiv1" context="_1" members="" mangled="_Z10__cxxabiv1" demangled="__cxxabiv1"/>
+  <Enumeration id="_102" name="SpiceBitmapFmt" context="_1" location="f1:146" file="f1" line="146" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_BITMAP_FMT_INVALID" init="0"/>
+    <EnumValue name="SPICE_BITMAP_FMT_1BIT_LE" init="1"/>
+    <EnumValue name="SPICE_BITMAP_FMT_1BIT_BE" init="2"/>
+    <EnumValue name="SPICE_BITMAP_FMT_4BIT_LE" init="3"/>
+    <EnumValue name="SPICE_BITMAP_FMT_4BIT_BE" init="4"/>
+    <EnumValue name="SPICE_BITMAP_FMT_8BIT" init="5"/>
+    <EnumValue name="SPICE_BITMAP_FMT_16BIT" init="6"/>
+    <EnumValue name="SPICE_BITMAP_FMT_24BIT" init="7"/>
+    <EnumValue name="SPICE_BITMAP_FMT_32BIT" init="8"/>
+    <EnumValue name="SPICE_BITMAP_FMT_RGBA" init="9"/>
+    <EnumValue name="SPICE_BITMAP_FMT_ENUM_END" init="10"/>
+  </Enumeration>
+  <Typedef id="_103" name="SpiceBitmapFmt" type="_102" context="_1" location="f1:159" file="f1" line="159"/>
+  <Function id="_104" name="__builtin_frame_address" returns="_240" context="_1" location="f0:15" file="f0" line="15" extern="1">
+    <Argument name="LEVEL" type="_242" location="f0:15" file="f0" line="15"/>
+  </Function>
+  <Function id="_105" name="__builtin_cabs" returns="_229" context="_1" mangled="cabs" location="f0:91" file="f0" line="91" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_238" location="f0:91" file="f0" line="91"/>
+  </Function>
+  <Enumeration id="_106" name="SpiceStreamFlags" context="_1" location="f1:101" file="f1" line="101" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_STREAM_FLAGS_TOP_DOWN" init="1"/>
+    <EnumValue name="SPICE_STREAM_FLAGS_MASK" init="1"/>
+  </Enumeration>
+  <Typedef id="_107" name="SpiceStreamFlags" type="_106" context="_1" location="f1:105" file="f1" line="105"/>
+  <Enumeration id="_108" name="SpiceTunnelIpType" context="_1" location="f1:316" file="f1" line="316" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_TUNNEL_IP_TYPE_INVALID" init="0"/>
+    <EnumValue name="SPICE_TUNNEL_IP_TYPE_IPv4" init="1"/>
+    <EnumValue name="SPICE_TUNNEL_IP_TYPE_ENUM_END" init="2"/>
+  </Enumeration>
+  <Typedef id="_109" name="SpiceTunnelIpType" type="_108" context="_1" location="f1:321" file="f1" line="321"/>
+  <Function id="_110" name="__builtin_atan2f" returns="_231" context="_1" mangled="atan2f" location="f0:32" file="f0" line="32" extern="1" attributes="nothrow">
+    <Argument type="_231" location="f0:32" file="f0" line="32"/>
+    <Argument type="_231" location="f0:32" file="f0" line="32"/>
+  </Function>
+  <Function id="_111" name="__builtin_atan2l" returns="_232" context="_1" mangled="atan2l" location="f0:33" file="f0" line="33" extern="1" attributes="nothrow">
+    <Argument type="_232" location="f0:33" file="f0" line="33"/>
+    <Argument type="_232" location="f0:33" file="f0" line="33"/>
+  </Function>
+  <Function id="_112" name="__builtin_isinf" returns="_233" context="_1" mangled="isinf" location="f0:139" file="f0" line="139" extern="1" attributes="nothrow const">
+    <Ellipsis/>
+  </Function>
+  <Function id="_113" name="__builtin_fpclassify" returns="_233" context="_1" location="f0:135" file="f0" line="135" extern="1">
+    <Ellipsis/>
+  </Function>
+  <Function id="_114" name="__builtin_ccoshf" returns="_236" context="_1" mangled="ccoshf" location="f0:105" file="f0" line="105" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_236" location="f0:105" file="f0" line="105"/>
+  </Function>
+  <Function id="_115" name="__builtin_ccoshl" returns="_237" context="_1" mangled="ccoshl" location="f0:107" file="f0" line="107" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_237" location="f0:107" file="f0" line="107"/>
+  </Function>
+  <Enumeration id="_116" name="SpiceBitmapFlags" context="_1" location="f1:161" file="f1" line="161" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_BITMAP_FLAGS_PAL_CACHE_ME" init="1"/>
+    <EnumValue name="SPICE_BITMAP_FLAGS_PAL_FROM_CACHE" init="2"/>
+    <EnumValue name="SPICE_BITMAP_FLAGS_TOP_DOWN" init="4"/>
+    <EnumValue name="SPICE_BITMAP_FLAGS_MASK" init="7"/>
+  </Enumeration>
+  <Typedef id="_117" name="SpiceBitmapFlags" type="_116" context="_1" location="f1:167" file="f1" line="167"/>
+  <Enumeration id="_118" name="SpiceStringFlags" context="_1" location="f1:205" file="f1" line="205" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_STRING_FLAGS_RASTER_A1" init="1"/>
+    <EnumValue name="SPICE_STRING_FLAGS_RASTER_A4" init="2"/>
+    <EnumValue name="SPICE_STRING_FLAGS_RASTER_A8" init="4"/>
+    <EnumValue name="SPICE_STRING_FLAGS_RASTER_TOP_DOWN" init="8"/>
+    <EnumValue name="SPICE_STRING_FLAGS_MASK" init="15"/>
+  </Enumeration>
+  <Typedef id="_119" name="SpiceStringFlags" type="_118" context="_1" location="f1:212" file="f1" line="212"/>
+  <Function id="_120" name="__builtin_atan" returns="_229" context="_1" mangled="atan" location="f0:30" file="f0" line="30" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_229" location="f0:30" file="f0" line="30"/>
+  </Function>
+  <Function id="_121" name="__builtin_sinhf" returns="_231" context="_1" mangled="sinhf" location="f0:78" file="f0" line="78" extern="1" attributes="nothrow">
+    <Argument type="_231" location="f0:78" file="f0" line="78"/>
+  </Function>
+  <Function id="_122" name="__builtin_sinhl" returns="_232" context="_1" mangled="sinhl" location="f0:79" file="f0" line="79" extern="1" attributes="nothrow">
+    <Argument type="_232" location="f0:79" file="f0" line="79"/>
+  </Function>
+  <Function id="_123" name="__builtin_sqrtf" returns="_231" context="_1" mangled="sqrtf" location="f0:82" file="f0" line="82" extern="1" attributes="nothrow">
+    <Argument type="_231" location="f0:82" file="f0" line="82"/>
+  </Function>
+  <Function id="_124" name="__builtin_sqrtl" returns="_232" context="_1" mangled="sqrtl" location="f0:83" file="f0" line="83" extern="1" attributes="nothrow">
+    <Argument type="_232" location="f0:83" file="f0" line="83"/>
+  </Function>
+  <Function id="_125" name="__builtin_frexpf" returns="_231" context="_1" mangled="frexpf" location="f0:57" file="f0" line="57" extern="1" attributes="nothrow">
+    <Argument type="_231" location="f0:57" file="f0" line="57"/>
+    <Argument type="_243" location="f0:57" file="f0" line="57"/>
+  </Function>
+  <Function id="_126" name="__builtin_frexpl" returns="_232" context="_1" mangled="frexpl" location="f0:58" file="f0" line="58" extern="1" attributes="nothrow">
+    <Argument type="_232" location="f0:58" file="f0" line="58"/>
+    <Argument type="_243" location="f0:58" file="f0" line="58"/>
+  </Function>
+  <Function id="_127" name="__builtin_cpowf" returns="_236" context="_1" mangled="cpowf" location="f0:129" file="f0" line="129" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_236" location="f0:129" file="f0" line="129"/>
+    <Argument type="_236" location="f0:129" file="f0" line="129"/>
+  </Function>
+  <Function id="_128" name="__builtin_cpowl" returns="_237" context="_1" mangled="cpowl" location="f0:131" file="f0" line="131" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_237" location="f0:131" file="f0" line="131"/>
+    <Argument type="_237" location="f0:131" file="f0" line="131"/>
+  </Function>
+  <Enumeration id="_129" name="SpiceSurfaceFmt" context="_1" location="f1:220" file="f1" line="220" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_SURFACE_FMT_INVALID" init="0"/>
+    <EnumValue name="SPICE_SURFACE_FMT_1_A" init="1"/>
+    <EnumValue name="SPICE_SURFACE_FMT_8_A" init="8"/>
+    <EnumValue name="SPICE_SURFACE_FMT_16_555" init="16"/>
+    <EnumValue name="SPICE_SURFACE_FMT_32_xRGB" init="32"/>
+    <EnumValue name="SPICE_SURFACE_FMT_16_565" init="80"/>
+    <EnumValue name="SPICE_SURFACE_FMT_32_ARGB" init="96"/>
+    <EnumValue name="SPICE_SURFACE_FMT_ENUM_END" init="97"/>
+  </Enumeration>
+  <Typedef id="_130" name="SpiceSurfaceFmt" type="_129" context="_1" location="f1:230" file="f1" line="230"/>
+  <Enumeration id="_131" name="SpiceCursorFlags" context="_1" location="f1:285" file="f1" line="285" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_CURSOR_FLAGS_NONE" init="1"/>
+    <EnumValue name="SPICE_CURSOR_FLAGS_CACHE_ME" init="2"/>
+    <EnumValue name="SPICE_CURSOR_FLAGS_FROM_CACHE" init="4"/>
+    <EnumValue name="SPICE_CURSOR_FLAGS_MASK" init="7"/>
+  </Enumeration>
+  <Typedef id="_132" name="SpiceCursorFlags" type="_131" context="_1" location="f1:291" file="f1" line="291"/>
+  <Enumeration id="_133" name="._0" context="_1" location="f1:323" file="f1" line="323" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_CHANNEL_MAIN" init="1"/>
+    <EnumValue name="SPICE_CHANNEL_DISPLAY" init="2"/>
+    <EnumValue name="SPICE_CHANNEL_INPUTS" init="3"/>
+    <EnumValue name="SPICE_CHANNEL_CURSOR" init="4"/>
+    <EnumValue name="SPICE_CHANNEL_PLAYBACK" init="5"/>
+    <EnumValue name="SPICE_CHANNEL_RECORD" init="6"/>
+    <EnumValue name="SPICE_CHANNEL_TUNNEL" init="7"/>
+    <EnumValue name="SPICE_CHANNEL_SMARTCARD" init="8"/>
+    <EnumValue name="SPICE_CHANNEL_USBREDIR" init="9"/>
+    <EnumValue name="SPICE_END_CHANNEL" init="10"/>
+  </Enumeration>
+  <Enumeration id="_134" name="._1" context="_1" location="f1:337" file="f1" line="337" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSG_MIGRATE" init="1"/>
+    <EnumValue name="SPICE_MSG_MIGRATE_DATA" init="2"/>
+    <EnumValue name="SPICE_MSG_SET_ACK" init="3"/>
+    <EnumValue name="SPICE_MSG_PING" init="4"/>
+    <EnumValue name="SPICE_MSG_WAIT_FOR_CHANNELS" init="5"/>
+    <EnumValue name="SPICE_MSG_DISCONNECTING" init="6"/>
+    <EnumValue name="SPICE_MSG_NOTIFY" init="7"/>
+    <EnumValue name="SPICE_MSG_LIST" init="8"/>
+  </Enumeration>
+  <Enumeration id="_135" name="._4" context="_1" location="f1:374" file="f1" line="374" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSGC_MAIN_CLIENT_INFO" init="101"/>
+    <EnumValue name="SPICE_MSGC_MAIN_MIGRATE_CONNECTED" init="102"/>
+    <EnumValue name="SPICE_MSGC_MAIN_MIGRATE_CONNECT_ERROR" init="103"/>
+    <EnumValue name="SPICE_MSGC_MAIN_ATTACH_CHANNELS" init="104"/>
+    <EnumValue name="SPICE_MSGC_MAIN_MOUSE_MODE_REQUEST" init="105"/>
+    <EnumValue name="SPICE_MSGC_MAIN_AGENT_START" init="106"/>
+    <EnumValue name="SPICE_MSGC_MAIN_AGENT_DATA" init="107"/>
+    <EnumValue name="SPICE_MSGC_MAIN_AGENT_TOKEN" init="108"/>
+    <EnumValue name="SPICE_MSGC_MAIN_MIGRATE_END" init="109"/>
+    <EnumValue name="SPICE_MSGC_END_MAIN" init="110"/>
+  </Enumeration>
+  <Enumeration id="_136" name="._5" context="_1" location="f1:388" file="f1" line="388" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSG_DISPLAY_MODE" init="101"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_MARK" init="102"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_RESET" init="103"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_COPY_BITS" init="104"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_INVAL_LIST" init="105"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_INVAL_ALL_PIXMAPS" init="106"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_INVAL_PALETTE" init="107"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_INVAL_ALL_PALETTES" init="108"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_STREAM_CREATE" init="122"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_STREAM_DATA" init="123"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_STREAM_CLIP" init="124"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_STREAM_DESTROY" init="125"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_STREAM_DESTROY_ALL" init="126"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_DRAW_FILL" init="302"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_DRAW_OPAQUE" init="303"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_DRAW_COPY" init="304"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_DRAW_BLEND" init="305"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_DRAW_BLACKNESS" init="306"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_DRAW_WHITENESS" init="307"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_DRAW_INVERS" init="308"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_DRAW_ROP3" init="309"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_DRAW_STROKE" init="310"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_DRAW_TEXT" init="311"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_DRAW_TRANSPARENT" init="312"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_DRAW_ALPHA_BLEND" init="313"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_SURFACE_CREATE" init="314"/>
+    <EnumValue name="SPICE_MSG_DISPLAY_SURFACE_DESTROY" init="315"/>
+    <EnumValue name="SPICE_MSG_END_DISPLAY" init="316"/>
+  </Enumeration>
+  <Enumeration id="_137" name="._7" context="_1" location="f1:426" file="f1" line="426" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSG_INPUTS_INIT" init="101"/>
+    <EnumValue name="SPICE_MSG_INPUTS_KEY_MODIFIERS" init="102"/>
+    <EnumValue name="SPICE_MSG_INPUTS_MOUSE_MOTION_ACK" init="111"/>
+    <EnumValue name="SPICE_MSG_END_INPUTS" init="112"/>
+  </Enumeration>
+  <Enumeration id="_138" name="._8" context="_1" location="f1:434" file="f1" line="434" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSGC_INPUTS_KEY_DOWN" init="101"/>
+    <EnumValue name="SPICE_MSGC_INPUTS_KEY_UP" init="102"/>
+    <EnumValue name="SPICE_MSGC_INPUTS_KEY_MODIFIERS" init="103"/>
+    <EnumValue name="SPICE_MSGC_INPUTS_MOUSE_MOTION" init="111"/>
+    <EnumValue name="SPICE_MSGC_INPUTS_MOUSE_POSITION" init="112"/>
+    <EnumValue name="SPICE_MSGC_INPUTS_MOUSE_PRESS" init="113"/>
+    <EnumValue name="SPICE_MSGC_INPUTS_MOUSE_RELEASE" init="114"/>
+    <EnumValue name="SPICE_MSGC_END_INPUTS" init="115"/>
+  </Enumeration>
+  <Enumeration id="_139" name="._9" context="_1" location="f1:446" file="f1" line="446" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSG_CURSOR_INIT" init="101"/>
+    <EnumValue name="SPICE_MSG_CURSOR_RESET" init="102"/>
+    <EnumValue name="SPICE_MSG_CURSOR_SET" init="103"/>
+    <EnumValue name="SPICE_MSG_CURSOR_MOVE" init="104"/>
+    <EnumValue name="SPICE_MSG_CURSOR_HIDE" init="105"/>
+    <EnumValue name="SPICE_MSG_CURSOR_TRAIL" init="106"/>
+    <EnumValue name="SPICE_MSG_CURSOR_INVAL_ONE" init="107"/>
+    <EnumValue name="SPICE_MSG_CURSOR_INVAL_ALL" init="108"/>
+    <EnumValue name="SPICE_MSG_END_CURSOR" init="109"/>
+  </Enumeration>
+  <Enumeration id="_140" name="SpiceLinkErr" context="_1" location="f1:7" file="f1" line="7" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_LINK_ERR_OK" init="0"/>
+    <EnumValue name="SPICE_LINK_ERR_ERROR" init="1"/>
+    <EnumValue name="SPICE_LINK_ERR_INVALID_MAGIC" init="2"/>
+    <EnumValue name="SPICE_LINK_ERR_INVALID_DATA" init="3"/>
+    <EnumValue name="SPICE_LINK_ERR_VERSION_MISMATCH" init="4"/>
+    <EnumValue name="SPICE_LINK_ERR_NEED_SECURED" init="5"/>
+    <EnumValue name="SPICE_LINK_ERR_NEED_UNSECURED" init="6"/>
+    <EnumValue name="SPICE_LINK_ERR_PERMISSION_DENIED" init="7"/>
+    <EnumValue name="SPICE_LINK_ERR_BAD_CONNECTION_ID" init="8"/>
+    <EnumValue name="SPICE_LINK_ERR_CHANNEL_NOT_AVAILABLE" init="9"/>
+    <EnumValue name="SPICE_LINK_ERR_ENUM_END" init="10"/>
+  </Enumeration>
+  <Typedef id="_141" name="SpiceLinkErr" type="_140" context="_1" location="f1:20" file="f1" line="20"/>
+  <Function id="_142" name="__builtin_tanhf" returns="_231" context="_1" mangled="tanhf" location="f0:87" file="f0" line="87" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_231" location="f0:87" file="f0" line="87"/>
+  </Function>
+  <Function id="_143" name="__builtin_tanhl" returns="_232" context="_1" mangled="tanhl" location="f0:88" file="f0" line="88" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_232" location="f0:88" file="f0" line="88"/>
+  </Function>
+  <Function id="_144" name="__builtin_cabsf" returns="_231" context="_1" mangled="cabsf" location="f0:90" file="f0" line="90" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_236" location="f0:90" file="f0" line="90"/>
+  </Function>
+  <Function id="_145" name="__builtin_cabsl" returns="_232" context="_1" mangled="cabsl" location="f0:92" file="f0" line="92" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_237" location="f0:92" file="f0" line="92"/>
+  </Function>
+  <Function id="_146" name="__builtin_powf" returns="_231" context="_1" mangled="powf" location="f0:70" file="f0" line="70" extern="1" attributes="nothrow">
+    <Argument type="_231" location="f0:70" file="f0" line="70"/>
+    <Argument type="_231" location="f0:70" file="f0" line="70"/>
+  </Function>
+  <Function id="_147" name="__builtin_powi" returns="_229" context="_1" location="f0:72" file="f0" line="72" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_229" location="f0:72" file="f0" line="72"/>
+    <Argument type="_234" location="f0:72" file="f0" line="72"/>
+  </Function>
+  <Function id="_148" name="__builtin_powl" returns="_232" context="_1" mangled="powl" location="f0:71" file="f0" line="71" extern="1" attributes="nothrow">
+    <Argument type="_232" location="f0:71" file="f0" line="71"/>
+    <Argument type="_232" location="f0:71" file="f0" line="71"/>
+  </Function>
+  <Enumeration id="_149" name="SpiceNotifySeverity" context="_1" location="f1:41" file="f1" line="41" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_NOTIFY_SEVERITY_INFO" init="0"/>
+    <EnumValue name="SPICE_NOTIFY_SEVERITY_WARN" init="1"/>
+    <EnumValue name="SPICE_NOTIFY_SEVERITY_ERROR" init="2"/>
+    <EnumValue name="SPICE_NOTIFY_SEVERITY_ENUM_END" init="3"/>
+  </Enumeration>
+  <Typedef id="_150" name="SpiceNotifySeverity" type="_149" context="_1" location="f1:47" file="f1" line="47"/>
+  <Function id="_151" name="__builtin_ccos" returns="_238" context="_1" mangled="ccos" location="f0:103" file="f0" line="103" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_238" location="f0:103" file="f0" line="103"/>
+  </Function>
+  <Function id="_152" name="__builtin_expect" returns="_244" context="_1" location="f0:16" file="f0" line="16" extern="1" attributes="nothrow const">
+    <Argument name="EXP" type="_244" location="f0:16" file="f0" line="16"/>
+    <Argument name="C" type="_244" location="f0:16" file="f0" line="16"/>
+  </Function>
+  <Function id="_153" name="__builtin_popcountl" returns="_234" context="_1" location="f0:100" file="f0" line="100" extern="1" attributes="nothrow const">
+    <Argument type="_244" location="f0:100" file="f0" line="100"/>
+  </Function>
+  <Enumeration id="_154" name="SpiceAlphaFlags" context="_1" location="f1:232" file="f1" line="232" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_ALPHA_FLAGS_DEST_HAS_ALPHA" init="1"/>
+    <EnumValue name="SPICE_ALPHA_FLAGS_SRC_SURFACE_HAS_ALPHA" init="2"/>
+    <EnumValue name="SPICE_ALPHA_FLAGS_MASK" init="3"/>
+  </Enumeration>
+  <Typedef id="_155" name="SpiceAlphaFlags" type="_154" context="_1" location="f1:237" file="f1" line="237"/>
+  <Enumeration id="_156" name="SpiceSurfaceFlags" context="_1" location="f1:214" file="f1" line="214" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_SURFACE_FLAGS_PRIMARY" init="1"/>
+    <EnumValue name="SPICE_SURFACE_FLAGS_MASK" init="1"/>
+  </Enumeration>
+  <Typedef id="_157" name="SpiceSurfaceFlags" type="_156" context="_1" location="f1:218" file="f1" line="218"/>
+  <Enumeration id="_158" name="SpiceImageType" context="_1" location="f1:121" file="f1" line="121" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_IMAGE_TYPE_BITMAP" init="0"/>
+    <EnumValue name="SPICE_IMAGE_TYPE_QUIC" init="1"/>
+    <EnumValue name="SPICE_IMAGE_TYPE_RESERVED" init="2"/>
+    <EnumValue name="SPICE_IMAGE_TYPE_LZ_PLT" init="100"/>
+    <EnumValue name="SPICE_IMAGE_TYPE_LZ_RGB" init="101"/>
+    <EnumValue name="SPICE_IMAGE_TYPE_GLZ_RGB" init="102"/>
+    <EnumValue name="SPICE_IMAGE_TYPE_FROM_CACHE" init="103"/>
+    <EnumValue name="SPICE_IMAGE_TYPE_SURFACE" init="104"/>
+    <EnumValue name="SPICE_IMAGE_TYPE_JPEG" init="105"/>
+    <EnumValue name="SPICE_IMAGE_TYPE_FROM_CACHE_LOSSLESS" init="106"/>
+    <EnumValue name="SPICE_IMAGE_TYPE_ZLIB_GLZ_RGB" init="107"/>
+    <EnumValue name="SPICE_IMAGE_TYPE_JPEG_ALPHA" init="108"/>
+    <EnumValue name="SPICE_IMAGE_TYPE_ENUM_END" init="109"/>
+  </Enumeration>
+  <Typedef id="_159" name="SpiceImageType" type="_158" context="_1" location="f1:136" file="f1" line="136"/>
+  <Enumeration id="_160" name="SpiceImageScaleMode" context="_1" location="f1:175" file="f1" line="175" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_IMAGE_SCALE_MODE_INTERPOLATE" init="0"/>
+    <EnumValue name="SPICE_IMAGE_SCALE_MODE_NEAREST" init="1"/>
+    <EnumValue name="SPICE_IMAGE_SCALE_MODE_ENUM_END" init="2"/>
+  </Enumeration>
+  <Typedef id="_161" name="SpiceImageScaleMode" type="_160" context="_1" location="f1:180" file="f1" line="180"/>
+  <Enumeration id="_162" name="SpiceResourceType" context="_1" location="f1:239" file="f1" line="239" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_RES_TYPE_INVALID" init="0"/>
+    <EnumValue name="SPICE_RES_TYPE_PIXMAP" init="1"/>
+    <EnumValue name="SPICE_RESOURCE_TYPE_ENUM_END" init="2"/>
+  </Enumeration>
+  <Typedef id="_163" name="SpiceResourceType" type="_162" context="_1" location="f1:244" file="f1" line="244"/>
+  <Enumeration id="_164" name="SpicePathFlags" context="_1" location="f1:86" file="f1" line="86" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_PATH_BEGIN" init="1"/>
+    <EnumValue name="SPICE_PATH_END" init="2"/>
+    <EnumValue name="SPICE_PATH_CLOSE" init="8"/>
+    <EnumValue name="SPICE_PATH_BEZIER" init="16"/>
+    <EnumValue name="SPICE_PATH_FLAGS_MASK" init="27"/>
+  </Enumeration>
+  <Typedef id="_165" name="SpicePathFlags" type="_164" context="_1" location="f1:93" file="f1" line="93"/>
+  <Function id="_166" name="__builtin_inff" returns="_231" context="_1" location="f0:19" file="f0" line="19" extern="1" attributes="nothrow const"/>
+  <Function id="_167" name="__builtin_infl" returns="_232" context="_1" location="f0:20" file="f0" line="20" extern="1" attributes="nothrow const"/>
+  <Function id="_168" name="__builtin_cos" returns="_229" context="_1" mangled="cos" location="f0:39" file="f0" line="39" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_229" location="f0:39" file="f0" line="39"/>
+  </Function>
+  <Enumeration id="_169" name="._11" context="_1" location="f1:470" file="f1" line="470" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSG_RECORD_START" init="101"/>
+    <EnumValue name="SPICE_MSG_RECORD_STOP" init="102"/>
+    <EnumValue name="SPICE_MSG_RECORD_VOLUME" init="103"/>
+    <EnumValue name="SPICE_MSG_RECORD_MUTE" init="104"/>
+    <EnumValue name="SPICE_MSG_END_RECORD" init="105"/>
+  </Enumeration>
+  <Enumeration id="_170" name="._16" context="_1" location="f1:520" file="f1" line="520" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSGC_SMARTCARD_DATA" init="101"/>
+    <EnumValue name="SPICE_MSGC_END_SMARTCARD" init="102"/>
+  </Enumeration>
+  <Enumeration id="_171" name="._18" context="_1" location="f1:532" file="f1" line="532" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSGC_SPICEVMC_DATA" init="101"/>
+    <EnumValue name="SPICE_MSGC_END_SPICEVMC" init="102"/>
+  </Enumeration>
+  <Function id="_172" name="__builtin_ctz" returns="_234" context="_1" location="f0:96" file="f0" line="96" extern="1" attributes="nothrow const">
+    <Argument type="_234" location="f0:96" file="f0" line="96"/>
+  </Function>
+  <Function id="_173" name="__builtin_return_address" returns="_240" context="_1" location="f0:14" file="f0" line="14" extern="1">
+    <Argument name="LEVEL" type="_242" location="f0:14" file="f0" line="14"/>
+  </Function>
+  <Function id="_174" name="__builtin_isnan" returns="_233" context="_1" mangled="isnan" location="f0:144" file="f0" line="144" extern="1" attributes="nothrow const">
+    <Ellipsis/>
+  </Function>
+  <Enumeration id="_175" name="SpiceVideoCodecType" context="_1" location="f1:95" file="f1" line="95" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_VIDEO_CODEC_TYPE_MJPEG" init="1"/>
+    <EnumValue name="SPICE_VIDEO_CODEC_TYPE_ENUM_END" init="2"/>
+  </Enumeration>
+  <Typedef id="_176" name="SpiceVideoCodecType" type="_175" context="_1" location="f1:99" file="f1" line="99"/>
+  <Function id="_177" name="__builtin_csinhf" returns="_236" context="_1" mangled="csinhf" location="f0:117" file="f0" line="117" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_236" location="f0:117" file="f0" line="117"/>
+  </Function>
+  <Function id="_178" name="__builtin_csinhl" returns="_237" context="_1" mangled="csinhl" location="f0:119" file="f0" line="119" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_237" location="f0:119" file="f0" line="119"/>
+  </Function>
+  <Function id="_179" name="__builtin_csqrtf" returns="_236" context="_1" mangled="csqrtf" location="f0:120" file="f0" line="120" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_236" location="f0:120" file="f0" line="120"/>
+  </Function>
+  <Function id="_180" name="__builtin_csqrtl" returns="_237" context="_1" mangled="csqrtl" location="f0:122" file="f0" line="122" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_237" location="f0:122" file="f0" line="122"/>
+  </Function>
+  <Enumeration id="_181" name="SpiceRopd" context="_1" location="f1:182" file="f1" line="182" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_ROPD_INVERS_SRC" init="1"/>
+    <EnumValue name="SPICE_ROPD_INVERS_BRUSH" init="2"/>
+    <EnumValue name="SPICE_ROPD_INVERS_DEST" init="4"/>
+    <EnumValue name="SPICE_ROPD_OP_PUT" init="8"/>
+    <EnumValue name="SPICE_ROPD_OP_OR" init="16"/>
+    <EnumValue name="SPICE_ROPD_OP_AND" init="32"/>
+    <EnumValue name="SPICE_ROPD_OP_XOR" init="64"/>
+    <EnumValue name="SPICE_ROPD_OP_BLACKNESS" init="128"/>
+    <EnumValue name="SPICE_ROPD_OP_WHITENESS" init="256"/>
+    <EnumValue name="SPICE_ROPD_OP_INVERS" init="512"/>
+    <EnumValue name="SPICE_ROPD_INVERS_RES" init="1024"/>
+    <EnumValue name="SPICE_ROPD_MASK" init="2047"/>
+  </Enumeration>
+  <Typedef id="_182" name="SpiceRopd" type="_181" context="_1" location="f1:196" file="f1" line="196"/>
+  <Function id="_183" name="__builtin_floor" returns="_229" context="_1" mangled="floor" location="f0:51" file="f0" line="51" extern="1" attributes="nothrow const">
+    <Argument type="_229" location="f0:51" file="f0" line="51"/>
+  </Function>
+  <Function id="_184" name="__builtin_ldexp" returns="_229" context="_1" mangled="ldexp" location="f0:59" file="f0" line="59" extern="1" attributes="nothrow">
+    <Argument type="_229" location="f0:59" file="f0" line="59"/>
+    <Argument type="_234" location="f0:59" file="f0" line="59"/>
+  </Function>
+  <Function id="_185" name="__builtin_ccosf" returns="_236" context="_1" mangled="ccosf" location="f0:102" file="f0" line="102" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_236" location="f0:102" file="f0" line="102"/>
+  </Function>
+  <Function id="_186" name="__builtin_ccosh" returns="_238" context="_1" mangled="ccosh" location="f0:106" file="f0" line="106" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_238" location="f0:106" file="f0" line="106"/>
+  </Function>
+  <Function id="_187" name="__builtin_ccosl" returns="_237" context="_1" mangled="ccosl" location="f0:104" file="f0" line="104" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_237" location="f0:104" file="f0" line="104"/>
+  </Function>
+  <Function id="_188" name="__builtin_va_arg_pack_len" returns="_234" context="_1" location="f0:148" file="f0" line="148" extern="1">
+    <Ellipsis/>
+  </Function>
+  <Function id="_189" name="__builtin_islessgreater" returns="_233" context="_1" location="f0:143" file="f0" line="143" extern="1" attributes="nothrow const">
+    <Ellipsis/>
+  </Function>
+  <Enumeration id="_190" name="SpiceMigrateFlags" context="_1" location="f1:34" file="f1" line="34" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MIGRATE_NEED_FLUSH" init="1"/>
+    <EnumValue name="SPICE_MIGRATE_NEED_DATA_TRANSFER" init="2"/>
+    <EnumValue name="SPICE_MIGRATE_FLAGS_MASK" init="3"/>
+  </Enumeration>
+  <Typedef id="_191" name="SpiceMigrateFlags" type="_190" context="_1" location="f1:39" file="f1" line="39"/>
+  <Enumeration id="_192" name="._10" context="_1" location="f1:459" file="f1" line="459" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSG_PLAYBACK_DATA" init="101"/>
+    <EnumValue name="SPICE_MSG_PLAYBACK_MODE" init="102"/>
+    <EnumValue name="SPICE_MSG_PLAYBACK_START" init="103"/>
+    <EnumValue name="SPICE_MSG_PLAYBACK_STOP" init="104"/>
+    <EnumValue name="SPICE_MSG_PLAYBACK_VOLUME" init="105"/>
+    <EnumValue name="SPICE_MSG_PLAYBACK_MUTE" init="106"/>
+    <EnumValue name="SPICE_MSG_END_PLAYBACK" init="107"/>
+  </Enumeration>
+  <Enumeration id="_193" name="._12" context="_1" location="f1:479" file="f1" line="479" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSGC_RECORD_DATA" init="101"/>
+    <EnumValue name="SPICE_MSGC_RECORD_MODE" init="102"/>
+    <EnumValue name="SPICE_MSGC_RECORD_START_MARK" init="103"/>
+    <EnumValue name="SPICE_MSGC_END_RECORD" init="104"/>
+  </Enumeration>
+  <Enumeration id="_194" name="._13" context="_1" location="f1:487" file="f1" line="487" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSG_TUNNEL_INIT" init="101"/>
+    <EnumValue name="SPICE_MSG_TUNNEL_SERVICE_IP_MAP" init="102"/>
+    <EnumValue name="SPICE_MSG_TUNNEL_SOCKET_OPEN" init="103"/>
+    <EnumValue name="SPICE_MSG_TUNNEL_SOCKET_FIN" init="104"/>
+    <EnumValue name="SPICE_MSG_TUNNEL_SOCKET_CLOSE" init="105"/>
+    <EnumValue name="SPICE_MSG_TUNNEL_SOCKET_DATA" init="106"/>
+    <EnumValue name="SPICE_MSG_TUNNEL_SOCKET_CLOSED_ACK" init="107"/>
+    <EnumValue name="SPICE_MSG_TUNNEL_SOCKET_TOKEN" init="108"/>
+    <EnumValue name="SPICE_MSG_END_TUNNEL" init="109"/>
+  </Enumeration>
+  <Enumeration id="_195" name="._14" context="_1" location="f1:500" file="f1" line="500" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSGC_TUNNEL_SERVICE_ADD" init="101"/>
+    <EnumValue name="SPICE_MSGC_TUNNEL_SERVICE_REMOVE" init="102"/>
+    <EnumValue name="SPICE_MSGC_TUNNEL_SOCKET_OPEN_ACK" init="103"/>
+    <EnumValue name="SPICE_MSGC_TUNNEL_SOCKET_OPEN_NACK" init="104"/>
+    <EnumValue name="SPICE_MSGC_TUNNEL_SOCKET_FIN" init="105"/>
+    <EnumValue name="SPICE_MSGC_TUNNEL_SOCKET_CLOSED" init="106"/>
+    <EnumValue name="SPICE_MSGC_TUNNEL_SOCKET_CLOSED_ACK" init="107"/>
+    <EnumValue name="SPICE_MSGC_TUNNEL_SOCKET_DATA" init="108"/>
+    <EnumValue name="SPICE_MSGC_TUNNEL_SOCKET_TOKEN" init="109"/>
+    <EnumValue name="SPICE_MSGC_END_TUNNEL" init="110"/>
+  </Enumeration>
+  <Enumeration id="_196" name="._15" context="_1" location="f1:514" file="f1" line="514" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSG_SMARTCARD_DATA" init="101"/>
+    <EnumValue name="SPICE_MSG_END_SMARTCARD" init="102"/>
+  </Enumeration>
+  <Enumeration id="_197" name="._17" context="_1" location="f1:526" file="f1" line="526" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MSG_SPICEVMC_DATA" init="101"/>
+    <EnumValue name="SPICE_MSG_END_SPICEVMC" init="102"/>
+  </Enumeration>
+  <Function id="_198" name="__builtin_ctanhf" returns="_236" context="_1" mangled="ctanhf" location="f0:126" file="f0" line="126" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_236" location="f0:126" file="f0" line="126"/>
+  </Function>
+  <Function id="_199" name="__builtin_ctanhl" returns="_237" context="_1" mangled="ctanhl" location="f0:128" file="f0" line="128" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_237" location="f0:128" file="f0" line="128"/>
+  </Function>
+  <Enumeration id="_200" name="SpiceKeyboardModifierFlags" context="_1" location="f1:246" file="f1" line="246" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_KEYBOARD_MODIFIER_FLAGS_SCROLL_LOCK" init="1"/>
+    <EnumValue name="SPICE_KEYBOARD_MODIFIER_FLAGS_NUM_LOCK" init="2"/>
+    <EnumValue name="SPICE_KEYBOARD_MODIFIER_FLAGS_CAPS_LOCK" init="4"/>
+    <EnumValue name="SPICE_KEYBOARD_MODIFIER_FLAGS_MASK" init="7"/>
+  </Enumeration>
+  <Typedef id="_201" name="SpiceKeyboardModifierFlags" type="_200" context="_1" location="f1:252" file="f1" line="252"/>
+  <Function id="_202" name="__builtin_ceilf" returns="_231" context="_1" mangled="ceilf" location="f0:37" file="f0" line="37" extern="1" attributes="nothrow const">
+    <Argument type="_231" location="f0:37" file="f0" line="37"/>
+  </Function>
+  <Function id="_203" name="__builtin_ceill" returns="_232" context="_1" mangled="ceill" location="f0:38" file="f0" line="38" extern="1" attributes="nothrow const">
+    <Argument type="_232" location="f0:38" file="f0" line="38"/>
+  </Function>
+  <Function id="_204" name="__builtin_csinf" returns="_236" context="_1" mangled="csinf" location="f0:114" file="f0" line="114" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_236" location="f0:114" file="f0" line="114"/>
+  </Function>
+  <Function id="_205" name="__builtin_csinh" returns="_238" context="_1" mangled="csinh" location="f0:118" file="f0" line="118" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_238" location="f0:118" file="f0" line="118"/>
+  </Function>
+  <Function id="_206" name="__builtin_csinl" returns="_237" context="_1" mangled="csinl" location="f0:116" file="f0" line="116" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_237" location="f0:116" file="f0" line="116"/>
+  </Function>
+  <Function id="_207" name="__builtin_acos" returns="_229" context="_1" mangled="acos" location="f0:24" file="f0" line="24" extern="1" attributes="nothrow">
+    <Argument type="_229" location="f0:24" file="f0" line="24"/>
+  </Function>
+  <Function id="_208" name="__builtin_ctzll" returns="_234" context="_1" location="f0:98" file="f0" line="98" extern="1" attributes="nothrow const">
+    <Argument type="_235" location="f0:98" file="f0" line="98"/>
+  </Function>
+  <Function id="_209" name="__builtin_cargf" returns="_231" context="_1" mangled="cargf" location="f0:93" file="f0" line="93" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_236" location="f0:93" file="f0" line="93"/>
+  </Function>
+  <Function id="_210" name="__builtin_cargl" returns="_232" context="_1" mangled="cargl" location="f0:95" file="f0" line="95" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_237" location="f0:95" file="f0" line="95"/>
+  </Function>
+  <Function id="_211" name="__builtin_cosf" returns="_231" context="_1" mangled="cosf" location="f0:40" file="f0" line="40" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_231" location="f0:40" file="f0" line="40"/>
+  </Function>
+  <Function id="_212" name="__builtin_cosh" returns="_229" context="_1" mangled="cosh" location="f0:41" file="f0" line="41" extern="1" attributes="nothrow">
+    <Argument type="_229" location="f0:41" file="f0" line="41"/>
+  </Function>
+  <Function id="_213" name="__builtin_cosl" returns="_232" context="_1" mangled="cosl" location="f0:44" file="f0" line="44" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_232" location="f0:44" file="f0" line="44"/>
+  </Function>
+  <Enumeration id="_214" name="SpiceMouseButton" context="_1" location="f1:254" file="f1" line="254" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MOUSE_BUTTON_INVALID" init="0"/>
+    <EnumValue name="SPICE_MOUSE_BUTTON_LEFT" init="1"/>
+    <EnumValue name="SPICE_MOUSE_BUTTON_MIDDLE" init="2"/>
+    <EnumValue name="SPICE_MOUSE_BUTTON_RIGHT" init="3"/>
+    <EnumValue name="SPICE_MOUSE_BUTTON_UP" init="4"/>
+    <EnumValue name="SPICE_MOUSE_BUTTON_DOWN" init="5"/>
+    <EnumValue name="SPICE_MOUSE_BUTTON_ENUM_END" init="6"/>
+  </Enumeration>
+  <Typedef id="_215" name="SpiceMouseButton" type="_214" context="_1" location="f1:263" file="f1" line="263"/>
+  <Enumeration id="_216" name="SpiceClipType" context="_1" location="f1:79" file="f1" line="79" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_CLIP_TYPE_NONE" init="0"/>
+    <EnumValue name="SPICE_CLIP_TYPE_RECTS" init="1"/>
+    <EnumValue name="SPICE_CLIP_TYPE_ENUM_END" init="2"/>
+  </Enumeration>
+  <Typedef id="_217" name="SpiceClipType" type="_216" context="_1" location="f1:84" file="f1" line="84"/>
+  <Function id="_218" name="__builtin_isgreater" returns="_233" context="_1" location="f0:137" file="f0" line="137" extern="1" attributes="nothrow const">
+    <Ellipsis/>
+  </Function>
+  <Enumeration id="_219" name="SpiceImageFlags" context="_1" location="f1:138" file="f1" line="138" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_IMAGE_FLAGS_CACHE_ME" init="1"/>
+    <EnumValue name="SPICE_IMAGE_FLAGS_HIGH_BITS_SET" init="2"/>
+    <EnumValue name="SPICE_IMAGE_FLAGS_CACHE_REPLACE_ME" init="4"/>
+    <EnumValue name="SPICE_IMAGE_FLAGS_MASK" init="7"/>
+  </Enumeration>
+  <Typedef id="_220" name="SpiceImageFlags" type="_219" context="_1" location="f1:144" file="f1" line="144"/>
+  <Enumeration id="_221" name="SpiceMouseButtonMask" context="_1" location="f1:265" file="f1" line="265" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MOUSE_BUTTON_MASK_LEFT" init="1"/>
+    <EnumValue name="SPICE_MOUSE_BUTTON_MASK_MIDDLE" init="2"/>
+    <EnumValue name="SPICE_MOUSE_BUTTON_MASK_RIGHT" init="4"/>
+    <EnumValue name="SPICE_MOUSE_BUTTON_MASK_MASK" init="7"/>
+  </Enumeration>
+  <Typedef id="_222" name="SpiceMouseButtonMask" type="_221" context="_1" location="f1:271" file="f1" line="271"/>
+  <Enumeration id="_223" name="SpiceMouseMode" context="_1" location="f1:57" file="f1" line="57" artificial="1" size="32" align="32">
+    <EnumValue name="SPICE_MOUSE_MODE_SERVER" init="1"/>
+    <EnumValue name="SPICE_MOUSE_MODE_CLIENT" init="2"/>
+    <EnumValue name="SPICE_MOUSE_MODE_MASK" init="3"/>
+  </Enumeration>
+  <Typedef id="_224" name="SpiceMouseMode" type="_223" context="_1" location="f1:62" file="f1" line="62"/>
+  <Function id="_225" name="__builtin_sinf" returns="_231" context="_1" mangled="sinf" location="f0:76" file="f0" line="76" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_231" location="f0:76" file="f0" line="76"/>
+  </Function>
+  <Function id="_226" name="__builtin_sinh" returns="_229" context="_1" mangled="sinh" location="f0:77" file="f0" line="77" extern="1" attributes="nothrow">
+    <Argument type="_229" location="f0:77" file="f0" line="77"/>
+  </Function>
+  <Function id="_227" name="__builtin_sinl" returns="_232" context="_1" mangled="sinl" location="f0:80" file="f0" line="80" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_232" location="f0:80" file="f0" line="80"/>
+  </Function>
+  <Function id="_228" name="__builtin_csin" returns="_238" context="_1" mangled="csin" location="f0:115" file="f0" line="115" extern="1" attributes="nothrow pure no vops">
+    <Argument type="_238" location="f0:115" file="f0" line="115"/>
+  </Function>
+  <FundamentalType id="_229" name="double" size="64" align="64"/>
+  <PointerType id="_230" type="_247c" size="64" align="64"/>
+  <FundamentalType id="_231" name="float" size="32" align="32"/>
+  <FundamentalType id="_232" name="long double" size="128" align="128"/>
+  <FundamentalType id="_233" name="bool" size="8" align="8"/>
+  <FundamentalType id="_234" name="int" size="32" align="32"/>
+  <FundamentalType id="_235" name="long long int" size="64" align="64"/>
+  <FundamentalType id="_236" name="complex float" size="64" align="32"/>
+  <FundamentalType id="_237" name="complex long double" size="256" align="128"/>
+  <FundamentalType id="_238" name="complex double" size="128" align="64"/>
+  <FundamentalType id="_239" name="void" align="8"/>
+  <PointerType id="_240" type="_239" size="64" align="64"/>
+  <PointerType id="_241" type="_239c" size="64" align="64"/>
+  <FundamentalType id="_242" name="unsigned int" size="32" align="32"/>
+  <PointerType id="_243" type="_234" size="64" align="64"/>
+  <FundamentalType id="_244" name="long int" size="64" align="64"/>
+  <PointerType id="_245" type="_231" size="64" align="64"/>
+  <PointerType id="_246" type="_232" size="64" align="64"/>
+  <FundamentalType id="_247" name="char" size="8" align="8"/>
+  <CvQualifiedType id="_247c" type="_247" const="1"/>
+  <CvQualifiedType id="_239c" type="_239" const="1"/>
+  <File id="f0" name="/usr/share/gccxml-0.9/GCC/4.6/gccxml_builtins.h"/>
+  <File id="f1" name="spice/enums.h"/>
+</GCC_XML>

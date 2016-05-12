@@ -1,0 +1,10 @@
+// Pull the plugin from Maven Central
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.eriwen:gradle-js-plugin:1.8.0'
+    }
+}
+apply plugin: "sonar-runner"

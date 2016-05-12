@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title></title>
+</head>
+<body>
+
+<script async>
+
+//    debugger;
+
+// Start off by initializing a new context.
+context = new webkitAudioContext();
+
+
+var request = new XMLHttpRequest();
+request.open("GET", "a-team_intro.wav", true); // Path to Audio File
+request.responseType = "arraybuffer"; // Read as Binary Data
+request.onload = function() {
+   var incomingData = request.response;
+   play(incomingData);
+};
+request.send();
+
+function play(incomingData) {
+//            debugger;
+   source = context.createBufferSource(); // Create Sound Source
+   buffer = new webkitAudioContext().createBuffer(incomingData, true); // Create Mono Source Buffer from Raw Binary
+   source.buffer = buffer; // Add Buffered Data to Object
+    debugger;
+   source.connect(context.destination); // Connect Sound Source to Output
+   source.noteOn(0); // Play the Source when T
+}
+
+</script>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+	<!--<head>-->
+		<!--<meta charset="UTF-8">-->
+		<!--<meta name="description" content="Web Audio API Audio Buffer Tutorial Demo"/>-->
+		<!--<meta name="author" content="Obadiah Metivier"/>-->
+		<!--<link rel="stylesheet" href="audiobuffer.css">-->
+		<!--<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />-->
+		<!--<title>Web Audio API Audio Buffer Tutorial Demo</title>-->
+	<!--</head>-->
+	<!--<body>-->
+	<!--<div class="wrapper">-->
+		<!--<div id="header">-->
+			<!--<h1>Web Audio API Audio Buffer Tutorial</h1>-->
+			<!--<p>Demo by <a href="http://middleearmedia.com/" title="Middle Ear Media">Middle Ear Media</a></p>-->
+		<!--</div>-->
+		<!--<div id="content">-->
+			<!--<h2>Load a sound into a buffer and play it.</h2>-->
+				<!--<button class="play-button">Play</button>-->
+			<!--<p class="note"><span class="red">* </span><em>Keep in mind you need the latest version of Chrome or Safari for this to work!</em></p>-->
+		<!--</div>-->
+		<!--<div class="push"></div>-->
+	<!--</div>-->
+	<!--<div class="footer">-->
+		<!--<p>Go back to the <a href="http://middleearmedia.com/web-audio-api-audio-buffer/" title="Go back to the Tutorial">Web Audio API Audio Buffer Tutorial</a></p>-->
+<!--<script>-->
+<!--// Create the Audio Context-->
+<!--context = new webkitAudioContext();-->
+
+<!--// Load the Sound with XMLHttpRequest-->
+<!--function loadSound() {-->
+    <!--var request = new XMLHttpRequest();-->
+    <!--request.open("GET", "a-team_intro.wav", true); // Path to Audio File-->
+    <!--request.responseType = "arraybuffer"; // Read as Binary Data-->
+    <!--request.onload = function() {-->
+        <!--var incomingData = request.response;-->
+        <!--play(incomingData);-->
+    <!--};-->
+    <!--request.send();-->
+<!--}-->
+
+<!--// Play Function-->
+<!--function play(incomingData) {-->
+    <!--source = context.createBufferSource(); // Create Sound Source-->
+    <!--buffer = context.createBuffer(incomingData, true); // Create Mono Source Buffer from Raw Binary-->
+    <!--source.buffer = buffer; // Add Buffered Data to Object-->
+    <!--source.connect(context.destination); // Connect Sound Source to Output-->
+    <!--source.noteOn(context.currentTime); // Play the Source when Triggered-->
+<!--}-->
+
+<!--// Trigger Event for the Play Button-->
+<!--document.querySelector('button').addEventListener('click', loadSound);-->
+<!--</script>-->
+	<!--</div>-->
+	<!--<script type="text/javascript">-->
+
+	<!--var _gaq = _gaq || [];-->
+	<!--_gaq.push(['_setAccount', 'UA-6856016-1']);-->
+	<!--_gaq.push(['_trackPageview']);-->
+
+	<!--(function() {-->
+		<!--var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;-->
+		<!--ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';-->
+		<!--var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);-->
+	<!--})();-->
+
+	<!--</script>-->
+	<!--</body>-->
+<!--</html>-->

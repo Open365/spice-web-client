@@ -1,0 +1,3 @@
+kfft_single.lo: kfft_single.c ../config.h
+
+../config.h:

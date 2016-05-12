@@ -1,0 +1,13 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: cacard
+Description: SPICE server library
+Version: @VERSION@
+
+Requires: @CAC_CARD_REQUIRES@
+Libs: -L${libdir} -lcacard
+Libs.private: @CAC_CARD_NONPKGCONFIG_LIBS@
+Cflags: -I${includedir}/cacard

@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\PDFCreator\Program]
+"RunProgramAfterSaving"="1"
+"RunProgramAfterSavingProgramname"="%APPDATA%\\eyeos\\bus\\send.vbs"
+"RunProgramAfterSavingProgramParameters"="print \"<OutputFilename>\""
+"UseAutosave"="1"
+
+[HKEY_USERS\S-1-5-21-1532282551-1854700661-3332417503-1000\Software\PDFCreator\Program]
+"RunProgramAfterSaving"="1"
+"RunProgramAfterSavingProgramname"="%APPDATA%\\eyeos\\bus\\send.vbs"
+"RunProgramAfterSavingProgramParameters"="print \"<OutputFilename>\""
+"UseAutosave"="1"

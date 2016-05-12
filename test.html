@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Testing WDI Objects</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="unittest/node_modules/mocha/mocha.css" />
+        <!-- libs -->
+        <script src="jsquic.js"></script>
+		<script src="lib/modernizr.js"></script>
+		<script src="lib/jquery-2.0.3.js"></script>
+		<script src="lib/jquery-mousewheel.js"></script>
+		<script src="lib/lodash.4.0.0.min.js"></script>
+		<script src="lib/jgestures.min.js"></script>
+		<script src="lib/pixastic.js"></script>
+		<script src="lib/base64.js"></script>
+        <script src="lib/biginteger.js"></script>
+        <script src="lib/virtualjoystick.js"></script>
+        <script src="lib/prettyprint.js"></script>
+        <!-- end libs -->
+        <!-- core -->
+        <script src="lib/bowser.js"></script>
+        <script src="lib/utils.js"></script>
+        <script src="lib/flipper.js"></script>
+        <script src="lib/CollisionDetector.js"></script>
+        <script src="lib/GlobalPool.js"></script>
+        <script src="lib/GenericObjectPool.js"></script>
+        <script src="lib/AsyncConsumer.js"></script>
+        <script src="lib/AsyncWorker.js"></script>
+        <script src="lib/PacketWorkerIdentifier.js"></script>
+        <script src="unittest/node_modules/long-stack-traces/lib/long-stack-traces.js"></script>
+        <script src="spiceobjects/spiceobjects.js"></script>
+		<script src="spiceobjects/generated/protocol.js"></script>
+		<script src="lib/graphicdebug.js"></script>
+		<script src="lib/images/lz.js"></script>
+		<script src="lib/images/jsquic_uncompress.js"></script>
+		<script src="lib/images/jsquic_family.js"></script>
+		<script src="lib/images/jsquic_rgba.js"></script>
+		<script src="lib/images/bitmap.js"></script>
+		<script src="lib/images/png.js"></script>
+		<script src="lib/runqueue.js"></script>
+		<script src="lib/graphic.js"></script>
+		<script src="lib/queue.js"></script>
+		<script src="lib/ImageUncompressor.js"></script>
+		<script src="lib/SyncAsyncHandler.js"></script>
+		<script src="lib/stuckkeyshandler.js"></script>
+		<script src="lib/timelapsedetector.js"></script>
+        <script src="lib/displayRouter.js"></script>
+        <script src="lib/rasterEngine.js"></script>
+        <script src="lib/DataLogger.js"></script>
+		<script src="network/connectioncontrol.js"></script>
+		<script src="network/socket.js"></script>
+		<script src="network/socketqueue.js"></script>
+		<script src="network/packetlinkfactory.js"></script>
+		<script src="network/packetcontroller.js"></script>
+		<script src="network/packetextractor.js"></script>
+		<script src="network/packetreassembler.js"></script>
+		<script src="network/reassemblerfactory.js"></script>
+		<script src="network/sizedefiner.js"></script>
+        <script src="network/packetlinkfactory.js"></script>
+		<script src="network/spicechannel.js"></script>
+		<script src="network/busconnection.js"></script>
+		<script src="network/clusternodechooser.js"></script>
+		<script src="network/websocketwrapper.js"></script>
+		<script src="application/WorkerProcess.js"></script>
+		<script src="application/agent.js"></script>
+		<script src="application/clipboard.js"></script>
+		<script src="application/spiceconnection.js"></script>
+		<script src="application/clientgui.js"></script>
+		<script src="application/packetprocess.js"></script>
+		<script src="application/packetfilter.js"></script>
+		<script src="application/packetfactory.js"></script>
+		<script src="application/application.js"></script>
+		<script src="application/virtualmouse.js"></script>
+		<script src="application/imagecache.js"></script>
+		<script src="application/rasteroperation.js"></script>
+		<script src="application/stream.js"></script>
+		<script src="process/displayprocess.js"></script>
+		<script src="process/displaypreprocess.js"></script>
+		<script src="process/inputprocess.js"></script>
+		<script src="process/cursorprocess.js"></script>
+		<script src="process/mainprocess.js"></script>
+		<script src="keymaps/keymapes.js"></script>
+		<script src="keymaps/keymapus.js"></script>
+		<script src="keymaps/keymap.js"></script>
+		<script src="testlibs/fakewebsocket.js"></script>
+		<script src="unittest/node_modules/mocha/mocha.js"></script>
+        <script src="unittest/node_modules/sinon/pkg/sinon.js"></script>
+        <script src="unittest/node_modules/chai/chai.js"></script>
+		<script type="text/javascript">mocha.setup('tdd');</script>
+		<script src="unittest/eventobject.test.js"></script>
+		<script src="unittest/queue.test.js"></script>
+		<script src="unittest/viewqueue.test.js"></script>
+		<script src="unittest/socket.test.js"></script>
+		<script src="unittest/runqueue.test.js"></script>
+		<script src="unittest/socketqueue.test.js"></script>
+		<script src="unittest/packetlinkfactory.test.js"></script>
+		<script src="unittest/spicechannel.test.js"></script>
+		<script src="unittest/spiceconnection.test.js"></script>
+		<script src="unittest/clientgui.test.js"></script>
+		<script src="unittest/packetprocess.test.js"></script>
+		<script src="unittest/packetfactory.test.js"></script>
+		<script src="unittest/displayprocess.test.js"></script>
+		<script src="unittest/collisiondetector.test.js"></script>
+		<script src="unittest/application.test.js"></script>
+		<script src="unittest/packetreassembler.test.js"></script>
+		<script src="unittest/packetcontroller.test.js"></script>
+		<script src="unittest/packetextractor.test.js"></script>
+		<script src="unittest/reassemblerfactory.test.js"></script>
+		<script src="unittest/sizedefiner.test.js"></script>
+		<script src="unittest/graphictestfiles/uris.js"></script>
+		<script src="unittest/graphictest.test.js"></script>
+		<script src="unittest/imageuncompressor.test.js"></script>
+		<script src="unittest/syncasynchandler.test.js"></script>
+		<script src="unittest/graphic.test.js"></script>
+		<script src="unittest/stuckkeyshandler.test.js"></script>
+		<script src="unittest/timelapsedetector.test.js"></script>
+		<script src="unittest/clusternodechooser.test.js"></script>
+
+		<script>
+			window.assert = chai.assert;
+            wdi.exceptionHandling = false;
+            wdi.GlobalPool.init();
+			wdi.graphicDebug = new wdi.GraphicDebug({debugMode: false});
+            function runMocha()
+            {
+                if (window.mochaPhantomJS) {
+                    mochaPhantomJS.run();
+                }
+                else {
+                    mocha.run();
+                }
+            }
+
+		</script>
+	</head>
+	<body onload="runMocha()">
+		<div id="mocha"></div>
+	</body>
+</html>
