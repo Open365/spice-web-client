@@ -5,7 +5,6 @@
   "author": "eyeos",
   "homepage": "http://www.eyeos.com",
   "devDependencies": {
-    "eyeos-builder-utils": "*",
     "eyeos-gruntfile": "*",
     "canvas": "1.1.6",
     "chai": "1.8.0",
