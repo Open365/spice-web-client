@@ -18,7 +18,7 @@ cd "$THISDIR"
 
 npm install
 
-versionJson="$(node_modules/eyeos-builder-utils/extractJsonValue package.json version)"
+versionJson="$(./extractJsonVersion.js package.json)"
 versionGit="$(git describe --all --long | cut -d "-" -f 3)"
 version=${versionJson}_${versionGit}
 file=pkgs/spice-web-client-$version.tar.gz
