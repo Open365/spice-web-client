@@ -66,6 +66,15 @@ Application = $.spcExtend(wdi.DomainObject, {
 		this.timeLapseDetector = c.timeLapseDetector || new wdi.TimeLapseDetector();
         this.checkActivity = c.checkActivity;
         this.setup();
+
+        if (c['supportHighDPI']) {
+            this.clientGui.pixelRatio = window.devicePixelRatio;
+            this.pixelRatio = window.devicePixelRatio;
+
+        } else {
+            this.clientGui.pixelRatio = 1;
+            this.pixelRatio = 1;
+        }
     },
 
     run: function (c) {
@@ -565,6 +574,14 @@ Application = $.spcExtend(wdi.DomainObject, {
 
     resetActivity: function() {
         this.checkActivity.resetActivity();
+    },
+
+    toSpiceResolution: function (resolution) {
+        return {
+            width: resolution.width * this.pixelRatio,
+            height: resolution.height * this.pixelRatio,
+            scaleFactor: this.pixelRatio
+        }
     }
 });
 

@@ -342,11 +342,13 @@ wdi.ClientGui = $.spcExtend(wdi.EventObject.prototype, {
 		cnv.keepAlive = true; //prevent this canvas to return to the pool by packetfilter
 
 		cnv.id = 'canvas_' + surface.surface_id;
-		cnv.width = surface.width;
-		cnv.height = surface.height;
+		cnv.width = surface.width * this.pixelRatio;
+		cnv.height = surface.height * this.pixelRatio;
 		cnv.style.position = 'absolute';
 		cnv.style.top = this.canvasMarginY + 'px';
 		cnv.style.left = this.canvasMarginX + 'px';
+		cnv.style.width = surface.width + 'px';
+		cnv.style.height = surface.height+ 'px';
 
 		this.canvas[surface.surface_id] = cnv;
 		this.contexts[surface.surface_id] = cnv.getContext('2d');
@@ -579,7 +581,7 @@ wdi.ClientGui = $.spcExtend(wdi.EventObject.prototype, {
 			eventLayer['mousemove'](function(event) {
 				var x = event.pageX;
 				var y = event.pageY;
-				self.generateEvent.call(self, 'mousemove', [x + self.clientOffsetX, y + self.clientOffsetY, self.mouse_status]);
+				self.generateEvent.call(self, 'mousemove', [(x + self.clientOffsetX)*self.pixelRatio, (y + self.clientOffsetY) * self.pixelRatio, self.mouse_status]);
 				event.preventDefault();
 			});
 
