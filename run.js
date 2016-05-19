@@ -51,7 +51,9 @@ function start () {
 	});
 
 	wdi.graphicDebug = new wdi.GraphicDebug({debugMode: false});
-	var app = new Application();
+	var app = new Application({
+		supportHighDPI: false
+	});
 	var cancelReconnection = false;
 	var cancelFreezeTimer, cancelReconnectionTimer;
 
