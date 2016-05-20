@@ -593,14 +593,16 @@ wdi.ClientGui = $.spcExtend(wdi.EventObject.prototype, {
 
 		var mouseEventPause = false;
 
-		eventLayer.bind('mousewheel', function(event, delta) {
+		var fireWheel = _.throttle(function(event, delta) {
 			var button = delta > 0 ? 3 : 4;
 
 			self.generateEvent.call(self, 'mousedown', button);
 			self.generateEvent.call(self, 'mouseup', button);
 
 			return false;
-		});
+		}, 60);
+
+		eventLayer.bind('mousewheel', fireWheel);
 
 		this.fire('eventLayerCreated', eventLayer[0]);
 
