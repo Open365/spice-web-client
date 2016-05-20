@@ -602,9 +602,7 @@ wdi.ClientGui = $.spcExtend(wdi.EventObject.prototype, {
 			return false;
 		}, 60);
 
-		eventLayer.bind('mousewheel', function(event, delta) {
-			fireWheel(event, delta);
-		});
+		eventLayer.bind('mousewheel', fireWheel);
 
 		this.fire('eventLayerCreated', eventLayer[0]);
 
