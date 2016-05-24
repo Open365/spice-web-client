@@ -86,20 +86,22 @@ Application = $.spcExtend(wdi.DomainObject, {
 		if (!this.packetProcess) {
 			var displayProcess = false;
 
-			if (c.useWorkers === false) {
-				displayProcess = new wdi.DisplayProcess({
-					clientGui: this.clientGui
-				});
-			}
+            if (c.useWorkers === false) {
+                displayProcess = new wdi.DisplayProcess({
+                    clientGui: this.clientGui,
+                    disableMessageBuffering: c.disableMessageBuffering
+                });
+            }
 
-			this.packetProcess = new wdi.PacketProcess({
-				app: this,
-				clientGui: this.clientGui,
-				agent: this.agent,
-				spiceConnection: this.spiceConnection,
-	            inputsProcess: this.inputProcess,
-	            displayProcess: displayProcess
-	        })
+            this.packetProcess = new wdi.PacketProcess({
+                app: this,
+                clientGui: this.clientGui,
+                agent: this.agent,
+                spiceConnection: this.spiceConnection,
+                inputsProcess: this.inputProcess,
+                displayProcess: displayProcess,
+                disableMessageBuffering: c.disableMessageBuffering
+            });
 		}
 
         if(!this.checkActivity) {

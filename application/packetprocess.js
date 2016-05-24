@@ -26,7 +26,8 @@ wdi.PacketProcess = $.spcExtend(wdi.DomainObject, {
 			app: c.app
 		});
 		this.processors[wdi.SpiceVars.SPICE_CHANNEL_DISPLAY] = c.displayProcess || new wdi.DisplayPreProcess({
-			clientGui: c.clientGui
+			clientGui: c.clientGui,
+			disableMessageBuffering: c.disableMessageBuffering
 		});
 		this.processors[wdi.SpiceVars.SPICE_CHANNEL_INPUTS] = c.inputsProcess || new wdi.InputProcess({
 			clientGui: c.clientGui,

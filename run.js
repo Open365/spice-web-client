@@ -253,7 +253,15 @@ function start () {
 		'externalClipboardHandling': false,
 		'disableClipboard': false,
 		'layer': document.getElementById('testVdi'),
-		'vmInfoToken': getURLParameter('vmInfoToken')
+		'vmInfoToken': getURLParameter('vmInfoToken'),
+		//disableMessageBuffering: buffering only process messages in intervals of 50ms, allowing to create buffer and to
+		//delete duplicated packets. This dramatically improves video performance, but
+		//reduces performance under normal scenarios (like moving shapes in impress, or similar tasks)
+		//computers with limited resources will benefit a lot in the video performance if this setting is enabled
+		//but will also get big penalty when doing other tasks
+		//for normal scenarios, it is recommended set this setting to true, but the default value for the moment is false
+		//for backward compatibility
+		'disableMessageBuffering': true
 		//'language': navigator.language
 	};
 	app.run(runParams);

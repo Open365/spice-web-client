@@ -28,7 +28,8 @@ wdi.DisplayPreProcess = $.spcExtend(wdi.EventObject.prototype, {
 		this.idleConsumers = [];
 		this.superInit();
 		this.displayProcess = c.displayProcess || new wdi.DisplayProcess({
-			clientGui: c.clientGui
+				clientGui: c.clientGui,
+				disableMessageBuffering: c.disableMessageBuffering
 		});
 		this.clientGui = c.clientGui;
 
