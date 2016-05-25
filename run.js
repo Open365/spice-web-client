@@ -117,10 +117,10 @@ function start () {
 				}, 3000);
 			}
 
-			app.sendCommand('setResolution', {
+			app.sendCommand('setResolution', app.toSpiceResolution({
 				'width': width,
 				'height': height
-			});
+			}));
 			if (wdi.IntegrationBenchmarkEnabled) {
 				$('#integrationBenchmark').css({'display': 'inline'});
 				$('#launchWordButton').prop('disabled', false);
@@ -209,10 +209,10 @@ function start () {
 	};
 
 	$(window)['resize'](function () {
-		app.sendCommand('setResolution', {
+		app.sendCommand('setResolution', app.toSpiceResolution({
 			'width': $(window).width(),
 			'height': $(window).height()
-		});
+		}));
 	});
 
 	var useWorkers = true;
