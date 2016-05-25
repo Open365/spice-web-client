@@ -29,6 +29,7 @@ wdi.DisplayProcess = $.spcExtend(wdi.EventObject.prototype, {
 		this.started = false;
 		this.waitingMessages = [];
 		this.packetWorkerIdentifier = c.packetWorkerIdentifier || new wdi.PacketWorkerIdentifier();
+		this.disableMessageBuffering = c.disableMessageBuffering;
 	},
 
 	dispose: function () {
@@ -48,11 +49,11 @@ wdi.DisplayProcess = $.spcExtend(wdi.EventObject.prototype, {
 	},
 
 	process: function(spiceMessage) {
-		//this._process(spiceMessage);
-		//disable requestanimationframe equivalent for the moment
-		//the remove redundant draws implementation is buggy
-		//and there are considerations on how it is implemented
-
+		//if message buffering is disabled, skip queuing and looking for duplicates, just process the message ASAP
+		if(this.disableMessageBuffering) {
+			this._process(spiceMessage);
+			return;
+		}
 
 		var self = this;
 		this.waitingMessages.push(spiceMessage);
