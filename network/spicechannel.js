@@ -212,13 +212,13 @@ wdi.SpiceChannel = $.spcExtend(wdi.EventObject.prototype, {
 
 				//DUE To high level storage the memory specified for cache
 				//is 2-3 times bigger than expected.
-				var cache_size = 0*1024*1024;
+				var cache_size = 1;
 
 				var body = new wdi.SpiceCDisplayInit({
 					pixmap_cache_id:1,
 					pixmap_cache_size: cache_size,
 					glz_dictionary_id: 0,
-					glz_dictionary_window_size: 1
+					glz_dictionary_window_size: 0
 				}).marshall();
 
 				return redDisplayInit.concat(body);

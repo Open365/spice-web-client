@@ -142,19 +142,18 @@
         </style>
     </head>
     <body>
-        <div id="testVdi"></div>
-        <input type="button" value="getStats" style="display:none;position:absolute;top:0px;right:0px;z-index:100;width:200px;height:200px;" id="getStats" />
-        <input type="text" id="hiddeninput" style="opacity:0;font-size: 60px;color:transparent"/>
-        <input type="text" id="remoteClipboard" style="position:absolute;top:0px;font-size: 20px;color:black"/>
-        <div id="canvasSpace" style="display: none; height: 1024px"></div>
-        <div id="graphicDebug" style="display: none; background-color: white; font-family: Consolas,Lucida Console,Courier,mono">
-            <button id="clearButton" type="button" onclick="$(debugInfo).html('');">Clear</button>
-            <input id="logActive" type="checkbox" value="Log">Log
-            <div id="debugInfo" style="background-color: white"></div>
-        </div>
-        <div id="integrationBenchmark"  style="" width=100% height=100%>
-            <div class="closeButton" onclick="closeIntegrationBenchmark();">X</div>
-            <button id="launchWordButton"  type="button" onclick=startBenchmark()>Start benchmark</button>
-        </div>
+    <div id="testVdi"></div>
+    <input type="button" value="getStats" style="display:none;position:absolute;top:0px;right:0px;z-index:100;width:200px;height:200px;" id="getStats" />
+    <input type="text" id="hiddeninput" style="display:none;opacity:0;font-size: 60px;color:transparent"/>
+    <div id="canvasSpace" style="display: none; height: 1024px"></div>
+    <div id="graphicDebug" style="display: none; background-color: white; font-family: Consolas,Lucida Console,Courier,mono">
+        <button id="clearButton" type="button" onclick="$(debugInfo).html('');">Clear</button>
+        <input id="logActive" type="checkbox" value="Log">Log
+        <div id="debugInfo" style="background-color: white"></div>
+    </div>
+    <div id="integrationBenchmark"  style="" width=100% height=100%>
+        <div class="closeButton" onclick="closeIntegrationBenchmark();">X</div>
+        <button id="launchWordButton"  type="button" onclick=startBenchmark()>Start benchmark</button>
+    </div>
     </body>
 </html>
