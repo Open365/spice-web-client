@@ -1015,8 +1015,14 @@ wdi.SpiceCDisplayInit = $.spcExtend(wdi.SpiceObject, {
         this.rawData = [];
         this.rawData = this.rawData.concat(
             this.numberTo8(this.pixmap_cache_id),
-            this.numberTo32(this.pixmap_cache_size),
-            this.numberTo32(0),
+            this.numberTo8(0), //LSB
+            this.numberTo8(127),
+            this.numberTo8(0),
+            this.numberTo8(0),
+            this.numberTo8(0),
+            this.numberTo8(0),
+            this.numberTo8(0),
+            this.numberTo8(0), //MSB
             this.numberTo8(this.glz_dictionary_id),
             this.numberTo32(this.glz_dictionary_window_size)
         );
