@@ -363,6 +363,7 @@ Application = $.spcExtend(wdi.DomainObject, {
         try {
             this.spiceConnection.connect(connectionInfo);
         } catch (e) {
+			wdi.Debug.error('application connect error', e);
             this.clientGui.showError(e.message);
         }
     },
