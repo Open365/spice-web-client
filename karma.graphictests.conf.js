@@ -29,6 +29,7 @@
                  'lib/rng.js',
                  'lib/modernizr.js',
                  'lib/jquery-2.0.3.js',
+                 'lib/jquery-visibility.min.js',
                  'lib/lodash.4.0.0.min.js',
                  'lib/utils.js',
                  'spiceobjects/*.js',

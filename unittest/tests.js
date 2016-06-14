@@ -38,6 +38,7 @@ suite("tests suite", function () {
 
 				//region fakes
 				window = domWindow;
+				document = window.document;
 				fakeWorkerProcess();
 				Modernizr = {};
 				Modernizr['websocketsbinary'] = true;
