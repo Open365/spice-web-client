@@ -111,34 +111,18 @@ wdi.Keymap = {
     },
 
     controlPressed: function(keyCode, type, event) {
-        function isMac () {
-            return navigator.platform.indexOf('Mac') != -1
-        }
-
-        function isCtrlPressed(e) {
-            if (!e) {
-                return false;
-            }
-            var ctrlKey = e.ctrlKey;
-            if(isMac()) {
-                ctrlKey = e.metaKey;
-            }
-            return ctrlKey;
-        }
-
         if (keyCode !== 17 && keyCode !== 91) {  // Ctrl or CMD key
             if (type === 'keydown') {
-                if(isCtrlPressed(event)){
+                if(wdi.KeyEvent.isCtrlPressed(event)){
                     this.ctrlPressed = true;
                 }
             }
             else if (type === 'keyup') {
-                if(!isCtrlPressed(event)){
+                if(!wdi.KeyEvent.isCtrlPressed(event)){
                     this.ctrlPressed = false;
                 }
             }
         }
-
     },
 
     handledByCtrlKeyCode: function(type, keyCode, generated) {
