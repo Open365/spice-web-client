@@ -25,7 +25,7 @@ wdi.KeyEvent = {
 		}
 
 		if (!e) {
-			return false;
+			throw new Error('isCtrlPressed: No event provided.')
 		}
 		var ctrlKey = e.ctrlKey;
 		if (isMac()) {
