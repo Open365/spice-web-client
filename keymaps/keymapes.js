@@ -219,6 +219,10 @@ wdi.KeymapES = function() {
     var ctrlKeymapES = [];
     ctrlKeymapES[90]                = 0x2C; // z
 
+    // forbidden combinations that we are not going to send.
+    var ctrlForbiddenKeymap = [];
+    ctrlForbiddenKeymap[9]       = 0x0F; // TAB
+
     // reserved ctrl+? combinations we want to intercept from browser and inject manually to spice
     var reservedCtrlKeymap = [];
     reservedCtrlKeymap[81]                = 0x10; // q
@@ -254,6 +258,10 @@ wdi.KeymapES = function() {
 
         getCtrlKeymap: function() {
             return ctrlKeymapES;
+        },
+
+        getCtrlForbiddenKeymap: function() {
+            return ctrlForbiddenKeymap;
         },
 
         getReservedCtrlKeymap: function() {
