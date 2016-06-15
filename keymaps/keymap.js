@@ -111,6 +111,7 @@ wdi.Keymap = {
     },
 
     controlPressed: function(keyCode, type, event) {
+        if (!event) return false;
         if (keyCode !== 17 && keyCode !== 91) {  // Ctrl or CMD key
             if (type === 'keydown') {
                 if(wdi.KeyEvent.isCtrlPressed(event)){
