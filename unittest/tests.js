@@ -113,6 +113,7 @@ suite("tests suite", function () {
 				require("../process/mainprocess"),
 				require("../process/busprocess"),
 				require("../keymaps/keymapes"),
+				require("../keymaps/keymapesObj"),
 				require("../keymaps/keymapus"),
 				require("../keymaps/keymap"),
 				require("../testlibs/fakewebsocket"),
