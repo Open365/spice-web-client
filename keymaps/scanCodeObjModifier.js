@@ -37,6 +37,23 @@ wdi.ScanCodeObjModifier = $.spcExtend(wdi.EventObject.prototype, {
 		return this.getScanCode();
 	},
 
+	containsShiftDown: function () {
+		var shiftDownScanCode = [0x2A, 0, 0, 0];
+		var found = false;
+		_.find(this.prefix, function (item) {
+			found = _.isEqual(item, shiftDownScanCode)
+		});
+		return found;
+	},
+	addShiftUp: function () {
+		var shiftUpScanCode = [0xAA, 0, 0, 0];
+		this.prefix.unshift(shiftUpScanCode);
+	},
+	addShiftDown: function () {
+		var shiftDownScanCode = [0x2A, 0, 0, 0];
+		this.suffix.push(shiftDownScanCode);
+	},
+
 	getScanCode: function () {
 		return this.scanCodeObjProvider.getScanCode();
 	},
