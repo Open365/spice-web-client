@@ -17,7 +17,7 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-suite("Keymap", function() {
+suite("KeymapObj", function() {
 	var sut, oldKeymap;
 
 	setup(function () {
@@ -25,12 +25,12 @@ suite("Keymap", function() {
 		oldKeymap = wdi.KeymapES;
 	});
 
-	suite('#getVal', function () {
+	suite('#getScanCode', function () {
 		test('return the correct scancodes in a flattened array', function () {
 			var originalCharmap = oldKeymap.getCharmap();
 			Object.keys(originalCharmap).forEach(testChar);
 			function testChar (char) {
-				assert.deepEqual(sut.getVal(char), oldKeymap.getCharmap()[char]);
+				assert.deepEqual(sut.getScanCode(char), originalCharmap[char]);
 			}
 		});
 

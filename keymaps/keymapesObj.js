@@ -169,36 +169,11 @@ wdi.KeymapObjES = function() {
 	charmapES['_']   = {"prefix":[[42,0,0,0]],"main":[[53,0,0,0],[181,0,0,0]],"suffix":[[170,0,0,0]]};
 	charmapES[' ']   = {"prefix":[[57,0,0,0],[185,0,0,0]],"main":[],"suffix":[]};
 
-
-
-	function getPrefix (char) {
-		var prefix = charmapES[char].prefix;
-		return prefix || [];
-	}
-
-	function getSufix (char) {
-		var suffix = charmapES[char].suffix;
-		return suffix || [];
-	}
-
-	function getVal (char) {
-		var res = [];
-		var prefix = getPrefix(char);
-		if (prefix.length > 0) {
-			res = res.concat(prefix);
-		}
-		var main = charmapES[char].main;
-		res = res.concat(main);
-
-		var suffix = getSufix(char);
-		if (suffix.length > 0) {
-			res = res.concat(suffix);
-		}
-
-		return res;
-	}
 	return {
-		getVal: getVal,
+		getScanCode: function (char) {
+			var charObj = new wdi.scanCodeObjProvider(this.getCharmap()[char]);
+			return charObj.getScanCode();
+		},
 		getCharmap: function() {
 			return charmapES;
 		}

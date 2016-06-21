@@ -112,6 +112,7 @@ suite("tests suite", function () {
 				require("../process/mainprocess"),
 				require("../process/busprocess"),
 				require("../keymaps/keymapes"),
+				require("../keymaps/scanCodeObjProvider"),
 				require("../keymaps/keymapesObj"),
 				require("../keymaps/keymapus"),
 				require("../keymaps/keymap"),
