@@ -20,8 +20,8 @@
 wdi.scanCodeObjProvider = $.spcExtend(wdi.EventObject.prototype, {
 	init: function (charObj) {
 		this.charObj = charObj;
-		this.prefix = this.charObj.prefix || [];
-		this.suffix = this.charObj.suffix || [];
+		this.prefix = this.charObj.prefix.slice();
+		this.suffix = this.charObj.suffix.slice();
 	},
 
 	getPrefix: function () {
