@@ -113,6 +113,7 @@ suite("tests suite", function () {
 				require("../process/busprocess"),
 				require("../keymaps/keymapes"),
 				require("../keymaps/scanCodeObjProvider"),
+				require("../keymaps/scanCodeObjModifier"),
 				require("../keymaps/keymapesObj"),
 				require("../keymaps/keymapus"),
 				require("../keymaps/keymap"),

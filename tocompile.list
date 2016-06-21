@@ -59,6 +59,7 @@ process/mainprocess.js
 keymaps/keyevent.js
 keymaps/keymapes.js
 keymaps/scanCodeObjProvider.js
+keymaps/scanCodeObjModifier.js
 keymaps/keymapesObj.js
 keymaps/keymapus.js
 keymaps/keymap.js 
