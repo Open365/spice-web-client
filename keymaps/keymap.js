@@ -171,8 +171,20 @@ wdi.Keymap = {
     },
 
     getScanCodesFromCharCode: function(charCode) {
-        var scanCode = this.charmap[String.fromCharCode(charCode)];
-        if (scanCode === undefined) scanCode = [];
+        var charmap = this.keymapObj.getCharmap();
+
+        var scanCodeObj = charmap[String.fromCharCode(charCode)];
+        var scanCodeObjModifier = new wdi.ScanCodeObjModifier(scanCodeObj);
+
+        if(this.stuckKeysHandler.shiftKeyPressed) {
+            if(scanCodeObjModifier.containsShiftDown()) {
+                scanCodeObjModifier.removeShift();
+            } else {
+                scanCodeObjModifier.addShiftUp();
+                scanCodeObjModifier.addShiftDown();
+            }
+        }
+        var scanCode = scanCodeObjModifier.getScanCode();
         return scanCode;
     },
 
