@@ -704,6 +704,10 @@ wdi.ClientGui = $.spcExtend(wdi.EventObject.prototype, {
 		this.localClipboard.updateClipboardBuffer(data.value);
 	},
 
+	getStuckKeysHandler: function () {
+		return this.stuckKeysHandler;
+	},
+
 	initSound: function() {
 		var self = this;
 //		if (!Modernizr.touch) {
