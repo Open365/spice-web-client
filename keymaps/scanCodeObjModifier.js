@@ -18,6 +18,9 @@
  */
 
 wdi.ScanCodeObjModifier = $.spcExtend(wdi.EventObject.prototype, {
+	SHIFTDOWN: [0x2A, 0, 0, 0],
+	SHIFTUP: [0xAA, 0, 0, 0],
+
 	init: function (charObj) {
 		this.scanCodeObjProvider = new wdi.scanCodeObjProvider(charObj);
 		this.prefix = this.scanCodeObjProvider.getPrefix();
@@ -25,33 +28,27 @@ wdi.ScanCodeObjModifier = $.spcExtend(wdi.EventObject.prototype, {
 	},
 
 	removeShift: function () {
-		var shiftDownScanCode = [0x2A, 0, 0, 0];
-		var shiftUpScanCode = [0xAA, 0, 0, 0];
-
-		this.prefix = this._removeKeyFromPart(shiftDownScanCode, this.prefix);
+		this.prefix = this._removeKeyFromPart(this.SHIFTDOWN, this.prefix);
 		this.scanCodeObjProvider.setPrefix(this.prefix);
-		this.suffix = this._removeKeyFromPart(shiftUpScanCode, this.suffix);
-
+		this.suffix = this._removeKeyFromPart(this.SHIFTUP, this.suffix);
 		this.scanCodeObjProvider.setSuffix(this.suffix);
 
 		return this.getScanCode();
 	},
 
 	containsShiftDown: function () {
-		var shiftDownScanCode = [0x2A, 0, 0, 0];
 		var found = false;
+		var self = this;
 		_.find(this.prefix, function (item) {
-			found = _.isEqual(item, shiftDownScanCode)
+			found = _.isEqual(item, self.SHIFTDOWN)
 		});
 		return found;
 	},
 	addShiftUp: function () {
-		var shiftUpScanCode = [0xAA, 0, 0, 0];
-		this.prefix.unshift(shiftUpScanCode);
+		this.prefix.unshift(this.SHIFTUP);
 	},
 	addShiftDown: function () {
-		var shiftDownScanCode = [0x2A, 0, 0, 0];
-		this.suffix.push(shiftDownScanCode);
+		this.suffix.push(this.SHIFTDOWN);
 	},
 
 	getScanCode: function () {
@@ -63,5 +60,4 @@ wdi.ScanCodeObjModifier = $.spcExtend(wdi.EventObject.prototype, {
 			return !(_.isEqual(item, key))
 		});
 	}
-
 });
