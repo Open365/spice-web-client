@@ -36,16 +36,14 @@ wdi.Keymap = {
             this.ctrlKeymap = wdi['Keymap' + layout.toUpperCase()].getCtrlKeymap();
             this.ctrlForbiddenKeymap = wdi['Keymap' + layout.toUpperCase()].getCtrlForbiddenKeymap();
             this.reservedCtrlKeymap =  wdi['Keymap' + layout.toUpperCase()].getReservedCtrlKeymap();
-            this.charmap = wdi['Keymap' + layout.toUpperCase()].getCharmap();
-            this.keymapObj = wdi.KeymapObjES; //This needs to be "unhardcoded" once the keyboardObj map is implemented in US.
+            this.charmap = wdi['KeymapObj' + layout.toUpperCase()].getCharmap();
             this.stuckKeysHandler = stuckKeysHandler;
         } catch(e) {
 			this.keymap = wdi.KeymapES.getKeymap();
             this.ctrlKeymap = wdi.KeymapES.getCtrlKeymap();
             this.ctrlForbiddenKeymap = wdi.KeymapES.getCtrlForbiddenKeymap();
             this.reservedCtrlKeymap =  wdi.KeymapES.getReservedCtrlKeymap();
-            this.charmap = wdi.KeymapES.getCharmap();
-            this.keymapObj = wdi.KeymapObjES;
+            this.charmap = wdi.KeymapObjES.getCharmap();
             this.stuckKeysHandler = stuckKeysHandler;
 		}
     },
@@ -171,9 +169,7 @@ wdi.Keymap = {
     },
 
     getScanCodesFromCharCode: function(charCode) {
-        var charmap = this.keymapObj.getCharmap();
-
-        var scanCodeObj = charmap[String.fromCharCode(charCode)];
+        var scanCodeObj = this.charmap[String.fromCharCode(charCode)];
         var scanCodeObjModifier = new wdi.ScanCodeObjModifier(scanCodeObj);
 
         if(this.stuckKeysHandler.shiftKeyPressed) {
