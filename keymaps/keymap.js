@@ -62,7 +62,6 @@ wdi.Keymap = {
 			return e['scanCode'];
 		} else if (this.isForbiddenCombination(e)) {
             return [];
-            return this.getScanCodeFromKeyCode(e['keyCode'], e['type'], this.ctrlKeymap, this.reservedCtrlKeymap);
         } else if (this.isGeneratedShortcut(e['type'], e['keyCode'], e['generated'])) {
             return this.getScanCodeFromKeyCode(e['keyCode'], e['type'], this.ctrlKeymap, this.reservedCtrlKeymap);
         } else if (this.handledByCharmap(e['type'])) {
