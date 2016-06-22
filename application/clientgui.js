@@ -75,11 +75,19 @@ wdi.ClientGui = $.spcExtend(wdi.EventObject.prototype, {
 		this.clipBoardDataParser = c.clipBoardDataParser || new wdi.ClipboardDataParser({});
 		this.localClipboard = c.localClipboard || new wdi.LocalClipboard({clientGui: this});
 		this.app = c.app;
+
+		var self = this;
+		this.eventHandlers = {
+			hide: function () {
+				self.stuckKeysHandler.releaseAllKeys()
+			}
+		};
+		window.$(document).on(this.eventHandlers);
 	},
 
 	dispose: function() {
 		wdi.Debug.log("Disposing ClientGui");
-
+		$(document).off(this.eventHandlers);
 		this.unbindDOM();
 		this.removeAllCanvases();
 		this.inputManager.dispose();
@@ -694,6 +702,10 @@ wdi.ClientGui = $.spcExtend(wdi.EventObject.prototype, {
 
 	setToLocalClipboard: function(data) {
 		this.localClipboard.updateClipboardBuffer(data.value);
+	},
+
+	getStuckKeysHandler: function () {
+		return this.stuckKeysHandler;
 	},
 
 	initSound: function() {

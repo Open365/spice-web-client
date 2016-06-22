@@ -262,9 +262,8 @@ wdi.InputManager = $.spcExtend(wdi.EventObject.prototype, {
 	},
 
 	isSpecialKey: function(keyCode) {
-		var ctrl_keycode = 17,
-			shift_keycode = 16;
-		return [ctrl_keycode, shift_keycode].indexOf(keyCode) !== -1;
+		var ctrl_keycode = 17;
+		return [ctrl_keycode].indexOf(keyCode) !== -1;
 	}
 
 });

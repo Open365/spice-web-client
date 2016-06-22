@@ -56,6 +56,10 @@ process/inputprocess.js
 process/cursorprocess.js 
 process/playbackprocess.js 
 process/mainprocess.js 
-keymaps/keymapes.js 
-keymaps/keymapus.js 
+keymaps/keyevent.js
+keymaps/keymapes.js
+keymaps/scanCodeObjProvider.js
+keymaps/scanCodeObjModifier.js
+keymaps/keymapesObj.js
+keymaps/keymapus.js
 keymaps/keymap.js 

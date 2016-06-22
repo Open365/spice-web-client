@@ -137,7 +137,7 @@ Application = $.spcExtend(wdi.DomainObject, {
             if (wdi.SeamlessIntegration) {
                 this.disableKeyboard();//keyboard should start disabled is integrated
             }
-            wdi.Keymap.loadKeyMap(c['layout']);
+            wdi.Keymap.loadKeyMap(c['layout'], this.clientGui.getStuckKeysHandler());
             this.setExternalCallback(c['callback'], c['context']);
 
             try {
@@ -363,6 +363,7 @@ Application = $.spcExtend(wdi.DomainObject, {
         try {
             this.spiceConnection.connect(connectionInfo);
         } catch (e) {
+			wdi.Debug.error('application connect error', e);
             this.clientGui.showError(e.message);
         }
     },

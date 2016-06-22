@@ -230,7 +230,7 @@ function start () {
 		'port': 8000,
 		'protocol': 'ws',
 		'token': 'password',
-		'vmHost': 'localhost',
+		'vmHost': getURLParameter('vmhost') || 'localhost',
 		'vmPort': getURLParameter('vmport') || 5900,
 		'useBus': false,
 		'busHost': 'localhost',

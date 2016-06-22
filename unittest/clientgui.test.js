@@ -47,6 +47,14 @@ suite("ClientGui:", function() {
 		sut.releaseAllKeys();
 	}));
 
+	test('when document hides should release all keys', sinon.test(function() {
+		this.mock(stuckKeysHandler)
+			.expects('releaseAllKeys')
+			.once()
+			.withExactArgs();
+		window.$(document).trigger('hide');
+	}));
+
 	test('fillSubCanvas called with filterPosition will call to CollisionDetector thereIsBoxCollition', sinon.test(function() {
 		addFakeMainCanvas();
 		addFakeSubCanvas(0, 0, 0, 100, 100);

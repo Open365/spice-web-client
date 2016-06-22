@@ -18,8 +18,8 @@
 */
 
 require("long-stack-traces");
-var fs=require("fs")
-_ = require("underscore");
+var fs=require("fs");
+_ = require("../lib/lodash.4.0.0.min");
 window = null;
 suite("tests suite", function () {
 	test("define suites", function (done) {
@@ -38,6 +38,7 @@ suite("tests suite", function () {
 
 				//region fakes
 				window = domWindow;
+				document = window.document;
 				fakeWorkerProcess();
 				Modernizr = {};
 				Modernizr['websocketsbinary'] = true;
@@ -54,7 +55,6 @@ suite("tests suite", function () {
 				Image = Canvas.Image,
 				BigInteger = require("../lib/biginteger").BigInteger,
 				window.$=require("../lib/jquery-2.0.3"),
-				window._=require("../lib/lodash.4.0.0.min"),
 				window.bowser = require("../lib/bowser"),
 				require("../lib/virtualjoystick"),
 				require("../lib/utils"),
@@ -112,6 +112,9 @@ suite("tests suite", function () {
 				require("../process/mainprocess"),
 				require("../process/busprocess"),
 				require("../keymaps/keymapes"),
+				require("../keymaps/scanCodeObjProvider"),
+				require("../keymaps/scanCodeObjModifier"),
+				require("../keymaps/keymapesObj"),
 				require("../keymaps/keymapus"),
 				require("../keymaps/keymap"),
 				require("../testlibs/fakewebsocket"),
